@@ -32,6 +32,34 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Stats -->
+  <section class="section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-icon">🚀</span>
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Proyectos activos</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">👥</span>
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Miembros</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">🤝</span>
+          <span class="stat-num">200+</span>
+          <span class="stat-label">Participantes</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-icon">📅</span>
+          <span class="stat-num">43</span>
+          <span class="stat-label">Años de servicio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section section-gray">
     <div class="container">
       <h2 class="sec-title">Nuestros proyectos</h2>
@@ -139,6 +167,37 @@ import Layout from '../layouts/Layout.astro';
     border: 2px solid rgba(255,255,255,0.4); border-radius: 999px; font-weight: 600;
   }
   .btn-outline-white:hover { border-color: var(--w); background: rgba(255,255,255,0.1); }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .stat-card {
+    text-align: center;
+    padding: 1.25rem 0.75rem;
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    box-shadow: var(--shadow);
+  }
+  .stat-icon { font-size: 1.8rem; display: block; margin-bottom: 0.3rem; }
+  .stat-num {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--green);
+    line-height: 1.1;
+  }
+  .stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--g500);
+    margin-top: 0.2rem;
+  }
 
   /* Sections */
   .section { padding: 2.5rem 0; }
