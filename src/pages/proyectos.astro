@@ -34,57 +34,63 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="proj-grid-full">
       <a href="/educo/" class="proj-card-full">
-        <span class="proj-e">🧒</span>
-        <div>
+        <div class="proj-img" style="background-image:url('/images/slideshow/educo-capture-decran-2025-11-27-134222.png')"></div>
+        <div class="proj-body">
           <h3>EDUCO — Voces de la Infancia Migrante</h3>
           <p>Bienestar, inclusión social y convivencia intercultural de niños, niñas y adolescentes migrantes.</p>
         </div>
       </a>
       <a href="/educa-zaidin/" class="proj-card-full">
-        <span class="proj-e">📚</span>
-        <div>
+        <div class="proj-img" style="background-image:url('/images/slideshow/educazaidin-img_6241.jpg')"></div>
+        <div class="proj-body">
           <h3>EDUCA ZAIDIN</h3>
           <p>Apoyo socioeducativo para familias y menores en riesgo de fracaso escolar.</p>
         </div>
       </a>
       <a href="/todos-somos-zaidin/" class="proj-card-full">
-        <span class="proj-e">🗣️</span>
-        <div>
+        <div class="proj-img" style="background-image:url('/images/slideshow/todosomos-img_6249.jpg')"></div>
+        <div class="proj-body">
           <h3>Todos Somos Zaidín</h3>
           <p>Clases de español, preparación de nacionalidad e integración social para personas migrantes.</p>
         </div>
       </a>
       <a href="/formate-y-participa/" class="proj-card-full">
-        <span class="proj-e">✊</span>
-        <div>
+        <div class="proj-img" style="background-image:url('/images/slideshow/formate-imagen.png')"></div>
+        <div class="proj-body">
           <h3>Fórmate y Participa</h3>
           <p>Talleres, cafés tertulia y acciones de sensibilización por la igualdad de género.</p>
         </div>
       </a>
       <a href="/eracis/" class="proj-card-full">
-        <span class="proj-e">🏘️</span>
-        <div>
+        <div class="proj-img proj-img-default">
+          <span>🏘️</span>
+        </div>
+        <div class="proj-body">
           <h3>ERACIS</h3>
           <p>Estrategia Regional Andaluza para la Cohesión e Inclusión Social.</p>
         </div>
       </a>
       <a href="/juventud-zaidinera/" class="proj-card-full">
-        <span class="proj-e">🌟</span>
-        <div>
+        <div class="proj-img" style="background-image:url('/images/slideshow/test-1-1.jpg')"></div>
+        <div class="proj-body">
           <h3>Juventud Zaidinera</h3>
           <p>Proyecto Erasmus+ de participación juvenil, formación y voluntariado socioeducativo.</p>
         </div>
       </a>
       <a href="/redefine/" class="proj-card-full">
-        <span class="proj-e">💼</span>
-        <div>
+        <div class="proj-img proj-img-default">
+          <span>💼</span>
+        </div>
+        <div class="proj-body">
           <h3>Redefine tu Futuro</h3>
           <p>Empleabilidad juvenil, orientación laboral y acompañamiento sociolaboral.</p>
         </div>
       </a>
       <a href="/apoyo-a-la-regularizacion/" class="proj-card-full">
-        <span class="proj-e">📋</span>
-        <div>
+        <div class="proj-img proj-img-default">
+          <span>📋</span>
+        </div>
+        <div class="proj-body">
           <h3>Apoyo a la Regularización</h3>
           <p>Informe de Vulnerabilidad para la Regularización Extraordinaria.</p>
         </div>
@@ -126,34 +132,49 @@ import Layout from '../layouts/Layout.astro';
   .proj-grid-full {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    gap: 1rem;
   }
   .proj-card-full {
     display: flex;
-    align-items: flex-start;
-    gap: 0.85rem;
+    flex-direction: column;
     background: var(--w);
     border: 1px solid var(--g200);
     border-radius: var(--r);
-    padding: 1rem 1.25rem;
+    overflow: hidden;
     text-decoration: none !important;
     box-shadow: var(--shadow);
     transition: box-shadow 0.2s, transform 0.2s;
   }
   .proj-card-full:hover {
     box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-    border-color: var(--green-light);
+    transform: translateY(-3px);
   }
-  .proj-e { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.15rem; }
-  .proj-card-full h3 {
+  .proj-img {
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+  .proj-img-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: var(--g50);
+    color: var(--g300);
+  }
+  .proj-body {
+    padding: 0.85rem 1rem;
+  }
+  .proj-body h3 {
     font-size: 1rem;
     font-weight: 700;
     color: var(--green);
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.3rem;
     line-height: 1.3;
   }
-  .proj-card-full p {
+  .proj-body p {
     font-size: 0.85rem;
     color: var(--g500);
     margin: 0;
@@ -162,6 +183,12 @@ import Layout from '../layouts/Layout.astro';
 
   @media (min-width: 640px) {
     .proj-grid-full { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .proj-grid-full { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 1200px) {
+    .proj-grid-full { grid-template-columns: repeat(4, 1fr); }
   }
   @media (min-width: 769px) {
     .stats-grid { grid-template-columns: repeat(4, 1fr); max-width: 700px; }
