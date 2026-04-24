@@ -2,150 +2,318 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Inicio" description="Centro Sociocultural Zaidín — Igualdad, Integración, Participación. Asociación vecinal en el barrio del Zaidín, Granada desde 1977.">
+<Layout title="Inicio" description="Centro Sociocultural Zaidín — Asociación vecinal en el barrio del Zaidín, Granada. 45 años impulsando igualdad, integración y participación comunitaria.">
+  <!-- ==============================
+       Hero
+       ============================== -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
+      <div class="hero-badge">Asociación vecinal · Granada · 1977</div>
       <h1>Centro Sociocultural Zaidín</h1>
-      <p class="tagline">Igualdad · Integración · Participación</p>
-      <blockquote>
-        "La cultura popular tiene por misión, despertar la sabiduría que tiene todo hombre y mujer dentro de sí y ponerla en acción, para transformar la realidad."
-        <cite>Paulo Freire</cite>
-      </blockquote>
+      <p class="hero-tagline">Igualdad · Integración · Participación</p>
+      <div class="hero-quote">
+        <p>"La cultura popular tiene por misión, despertar la sabiduría que tiene todo hombre y mujer dentro de sí y ponerla en acción, para transformar la realidad."</p>
+        <cite>— Paulo Freire</cite>
+      </div>
       <div class="hero-actions">
-        <a href="/conocenos/" class="btn btn-outline-hero">Conócenos</a>
-        <a href="/contacto/" class="btn btn-accent">Contacto</a>
+        <a href="/conocenos/" class="btn btn-hero-primary">Conócenos</a>
+        <a href="/apoyo-a-la-regularizacion/" class="btn btn-hero-secondary">Apoyo a la Regularización</a>
       </div>
     </div>
   </section>
 
+  <!-- ==============================
+       Stats bar
+       ============================== -->
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat">
+        <span class="stat-number">45+</span>
+        <span class="stat-label">Años de historia</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">30+</span>
+        <span class="stat-label">Voluntarios activos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">7</span>
+        <span class="stat-label">Proyectos activos</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">100+</span>
+        <span class="stat-label">Personas atendidas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       About
+       ============================== -->
+  <section class="section-about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="section-label">¿Quiénes somos?</span>
+          <h2>Trabajamos por un barrio más justo</h2>
+          <p>
+            Somos una asociación sin ánimo de lucro que, desde 1977, promueve el desarrollo personal y comunitario
+            de los vecinos y vecinas del Zaidín a través de la intervención socioeducativa.
+          </p>
+          <p>
+            Actuamos sobre la realidad social del barrio con una mirada humana, participativa y transformadora.
+            Creemos en el poder de la educación, la convivencia y la organización comunitaria para generar cambios reales.
+          </p>
+          <a href="/nuestra-historia/" class="btn btn-primary">Conoce nuestra historia →</a>
+        </div>
+        <div class="about-stats-cards">
+          <div class="about-card card-mission">
+            <span class="about-card-icon">🎯</span>
+            <h3>Misión</h3>
+            <p>Promover el desarrollo personal y comunitario desde la intervención socioeducativa.</p>
+            <a href="/mision/" class="about-card-link">Leer más →</a>
+          </div>
+          <div class="about-card card-vision">
+            <span class="about-card-icon">👁️</span>
+            <h3>Visión</h3>
+            <p>Ser un espacio de referencia, abierto y participativo para todo el barrio.</p>
+            <a href="/vision/" class="about-card-link">Leer más →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       Values
+       ============================== -->
   <section class="section-values">
-    <div class="section-inner">
-      <h2>Nuestros pilares</h2>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Nuestra esencia</span>
+        <h2>Nuestros valores</h2>
+      </div>
       <div class="values-grid">
         <div class="value-card">
-          <div class="value-icon" aria-hidden="true">⚖️</div>
-          <h3>Justicia Social</h3>
-          <p>Solidaridad y ayuda mutua como base de nuestra acción comunitaria.</p>
+          <div class="value-icon">⚖️</div>
+          <div>
+            <h3>Justicia Social</h3>
+            <p>Solidaridad y ayuda mutua como base de nuestra acción comunitaria.</p>
+          </div>
         </div>
         <div class="value-card">
-          <div class="value-icon" aria-hidden="true">🌍</div>
-          <h3>Convivencia Intercultural</h3>
-          <p>Respeto y diálogo entre culturas como riqueza compartida del barrio.</p>
+          <div class="value-icon">🌍</div>
+          <div>
+            <h3>Convivencia Intercultural</h3>
+            <p>La diversidad como riqueza. Respeto y diálogo entre culturas.</p>
+          </div>
         </div>
         <div class="value-card">
-          <div class="value-icon" aria-hidden="true">🤝</div>
-          <h3>Participación Social</h3>
-          <p>Desarrollo comunitario desde la implicación activa de cada persona.</p>
+          <div class="value-icon">🤝</div>
+          <div>
+            <h3>Participación Social</h3>
+            <p>El barrio se construye desde abajo, con la implicación de cada persona.</p>
+          </div>
         </div>
         <div class="value-card">
-          <div class="value-icon" aria-hidden="true">💪</div>
-          <h3>Igualdad de Género</h3>
-          <p>Empoderamiento de las mujeres como eje de transformación social.</p>
+          <div class="value-icon">✊</div>
+          <div>
+            <h3>Igualdad de Género</h3>
+            <p>Empoderamiento de las mujeres como motor de transformación social.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ==============================
+       Projects
+       ============================== -->
   <section class="section-projects">
-    <div class="section-inner">
-      <h2>Nuestros Proyectos</h2>
-      <div class="card-grid">
-        <article class="card project-card">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Qué hacemos</span>
+        <h2>Nuestros proyectos</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-number">01</span>
+            <span class="project-tag tag-educo">Infancia</span>
+          </div>
           <h3>EDUCO</h3>
-          <p>Voces de la Infancia Migrante — bienestar e inclusión de niños y adolescentes migrantes.</p>
+          <p>Voces de la Infancia Migrante — bienestar e inclusión de niños y adolescentes migrantes a través del arte y la comunidad.</p>
           <a href="/educo/" class="btn btn-primary">Saber más</a>
         </article>
-        <article class="card project-card">
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-number">02</span>
+            <span class="project-tag tag-educacion">Educación</span>
+          </div>
           <h3>EDUCA ZAIDIN</h3>
-          <p>Apoyo socioeducativo para familias y menores en riesgo de fracaso escolar.</p>
+          <p>Apoyo socioeducativo para familias y menores en riesgo de fracaso escolar. Refuerzo, orientación y acompañamiento.</p>
           <a href="/educa-zaidin/" class="btn btn-primary">Saber más</a>
         </article>
-        <article class="card project-card">
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-number">03</span>
+            <span class="project-tag tag-migracion">Migración</span>
+          </div>
           <h3>TODOS SOMOS ZAIDIN</h3>
-          <p>Integración de vecinos migrantes: clases de español, preparación de nacionalidad y acompañamiento.</p>
+          <p>Clases de español, preparación de nacionalidad e integración social para vecinos de origen migrante.</p>
           <a href="/todos-somos-zaidin/" class="btn btn-primary">Saber más</a>
         </article>
-        <article class="card project-card">
+        <article class="project-card">
+          <div class="project-card-top">
+            <span class="project-number">04</span>
+            <span class="project-tag tag-igualdad">Igualdad</span>
+          </div>
           <h3>FÓRMATE Y PARTICIPA</h3>
-          <p>Igualdad de género: cafés tertulia, talleres, sensibilización contra la violencia machista.</p>
+          <p>Talleres, cafés tertulia y acciones de sensibilización por la igualdad de género contra la violencia machista.</p>
           <a href="/formate-y-participa/" class="btn btn-primary">Saber más</a>
         </article>
       </div>
+      <div class="projects-cta">
+        <a href="/eracis/" class="btn btn-outline">Ver todos los proyectos →</a>
+      </div>
     </div>
   </section>
 
+  <!-- ==============================
+       Instagram
+       ============================== -->
   <section class="section-instagram">
-    <div class="section-inner">
-      <h2>Últimas publicaciones</h2>
-      <p class="section-subtitle">Síguenos en <a href="https://www.instagram.com/csc_zaidin/" target="_blank" rel="noopener noreferrer">Instagram @csc_zaidin</a></p>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label light">Síguenos</span>
+        <h2>Últimas publicaciones</h2>
+      </div>
+      <p class="instagram-subtitle">
+        Síguenos en <a href="https://www.instagram.com/csc_zaidin/" target="_blank" rel="noopener noreferrer">@csc_zaidin</a> para estar al día
+      </p>
       <div class="instagram-grid">
-        <a href="https://www.instagram.com/p/DXgl-C9iAuz/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
+        <a href="https://www.instagram.com/p/DXgl-C9iAuz/" target="_blank" rel="noopener noreferrer" class="insta-card" style="background-image: linear-gradient(135deg, #667eea, #764ba2);">
+          <span class="insta-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </span>
+          <span class="insta-label">Ver en Instagram</span>
         </a>
-        <a href="https://www.instagram.com/p/DXbilpsiBKl/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
+        <a href="https://www.instagram.com/p/DXbilpsiBKl/" target="_blank" rel="noopener noreferrer" class="insta-card" style="background-image: linear-gradient(135deg, #f093fb, #f5576c);">
+          <span class="insta-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </span>
+          <span class="insta-label">Ver en Instagram</span>
         </a>
-        <a href="https://www.instagram.com/p/DXMebG1CLES/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
+        <a href="https://www.instagram.com/p/DXMebG1CLES/" target="_blank" rel="noopener noreferrer" class="insta-card" style="background-image: linear-gradient(135deg, #4facfe, #00f2fe);">
+          <span class="insta-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </span>
+          <span class="insta-label">Ver en Instagram</span>
         </a>
-        <a href="https://www.instagram.com/p/DW1yqlHCHvh/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
-        </a>
-        <a href="https://www.instagram.com/p/DWumE7BixqQ/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
-        </a>
-        <a href="https://www.instagram.com/p/DWhnHMqCxbI/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
-        </a>
-        <a href="https://www.instagram.com/p/DWLuGq1iAag/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
-        </a>
-        <a href="https://www.instagram.com/p/DV_m8Z0Ca_U/" target="_blank" rel="noopener noreferrer" class="insta-card">
-          <div class="insta-icon" aria-hidden="true">📸</div>
-          <span>Ver publicación</span>
+        <a href="https://www.instagram.com/p/DXEz8aYiFbP/" target="_blank" rel="noopener noreferrer" class="insta-card" style="background-image: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+          <span class="insta-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </span>
+          <span class="insta-label">Ver en Instagram</span>
         </a>
       </div>
     </div>
   </section>
 
+  <!-- ==============================
+       CTA
+       ============================== -->
   <section class="section-cta">
-    <div class="section-inner">
-      <h2>¿Quieres colaborar?</h2>
-      <p>Tu apoyo hace posible nuestro trabajo en el barrio del Zaidín.</p>
-      <div class="cta-actions">
-        <a href="/donaciones/" class="btn btn-accent">Haz una donación</a>
-        <a href="/colaboradores/" class="btn btn-outline">Hazte voluntario</a>
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <span class="section-label light">Colabora</span>
+          <h2>¿Quieres sumarte?</h2>
+          <p>Con tu apoyo seguimos construyendo un barrio más justo para todas y todos.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="/donaciones/" class="btn btn-cta-primary">❤️ Haz una donación</a>
+          <a href="/colaboradores/" class="btn btn-cta-secondary">🧑‍🤝‍🧑 Hazte voluntario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       Regularization banner
+       ============================== -->
+  <section class="section-regularization">
+    <div class="container">
+      <div class="reg-banner">
+        <div class="reg-icon">🇪🇸</div>
+        <div class="reg-text">
+          <h3>¿Necesitas el Informe de Vulnerabilidad para la Regularización Extraordinaria?</h3>
+          <p>Te ayudamos con el proceso. Solicita cita por WhatsApp.</p>
+        </div>
+        <a href="/apoyo-a-la-regularizacion/" class="btn btn-primary">Más información</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style is:global>
-  /* ============================
+  /* ==========================================================================
+     Layout helpers
+     ========================================================================== */
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--teal-600);
+    background: var(--teal-50);
+    padding: 0.3rem 1rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
+  .section-label.light {
+    background: rgba(255,255,255,0.15);
+    color: white;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  /* ==========================================================================
      Hero
-     ============================ */
+     ========================================================================== */
   .hero {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 75vh;
-    padding: var(--spacing-xl) var(--spacing-lg);
+    min-height: 80vh;
+    padding: 6rem 1.5rem;
     overflow: hidden;
   }
 
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(18, 91, 82, 0.92) 0%, rgba(26, 122, 110, 0.88) 50%, rgba(13, 92, 82, 0.92) 100%), url('/images/cropped-header.jpg');
+    background:
+      linear-gradient(135deg, rgba(6,78,59,0.93) 0%, rgba(5,150,105,0.85) 50%, rgba(4,120,87,0.9) 100%),
+      url('/images/cropped-header.jpg');
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -155,7 +323,7 @@ import Layout from '../layouts/Layout.astro';
     content: '';
     position: absolute;
     inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     z-index: 0;
   }
 
@@ -163,237 +331,474 @@ import Layout from '../layouts/Layout.astro';
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 750px;
-    color: var(--color-white);
+    max-width: 780px;
+    color: white;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(4px);
+    padding: 0.4rem 1.2rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.15);
   }
 
   .hero-content h1 {
-    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-size: clamp(2.2rem, 5.5vw, 3.5rem);
     font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: var(--spacing-md);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
   }
 
-  .hero-content .tagline {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  .hero-tagline {
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
     font-weight: 300;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.9;
-    margin-bottom: var(--spacing-xl);
+    opacity: 0.85;
+    margin-bottom: 2.5rem;
   }
 
-  .hero-content blockquote {
-    font-family: var(--font-serif);
-    font-size: clamp(1rem, 2vw, 1.2rem);
+  .hero-quote {
+    font-family: var(--font);
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
     line-height: 1.7;
     opacity: 0.92;
-    padding: var(--spacing-lg);
-    border-left: 4px solid var(--color-accent);
-    background: rgba(0, 0, 0, 0.15);
-    border-radius: 0 var(--radius-md) var(--radius-md) 0;
-    margin-bottom: var(--spacing-xl);
-    font-style: italic;
+    padding: 1.5rem 2rem;
+    border-left: 3px solid var(--warm-400);
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(4px);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 2.5rem;
+    text-align: left;
   }
-
-  .hero-content blockquote cite {
+  .hero-quote cite {
     display: block;
-    margin-top: var(--spacing-sm);
+    margin-top: 0.5rem;
     font-style: normal;
     font-weight: 600;
-    color: var(--color-accent);
+    color: var(--warm-400);
+    font-size: 0.95rem;
   }
 
   .hero-actions {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  .btn-outline-hero {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: 0.7rem 1.5rem;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    font-size: 1rem;
-    border: 2px solid var(--color-white);
-    background: transparent;
-    color: var(--color-white);
-    cursor: pointer;
-    text-decoration: none;
-    transition: background var(--transition), transform var(--transition);
-  }
-  .btn-outline-hero:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--color-white);
-    text-decoration: none;
-    transform: translateY(-1px);
-  }
-
-  /* ============================
-     Sections
-     ============================ */
-  .section-inner {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: var(--spacing-2xl) var(--spacing-lg);
-  }
-
-  .section-inner h2 {
-    text-align: center;
-    font-size: clamp(1.6rem, 3vw, 2rem);
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-lg);
+  .btn-hero-primary {
+    padding: 0.8rem 2rem;
+    background: white;
+    color: var(--teal-700);
     font-weight: 700;
+    border-radius: 999px;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    color: var(--teal-700);
   }
 
-  .section-subtitle {
+  .btn-hero-secondary {
+    padding: 0.8rem 2rem;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    font-size: 1rem;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: background var(--transition), border-color var(--transition);
+  }
+  .btn-hero-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+    color: white;
+  }
+
+  /* ==========================================================================
+     Stats bar
+     ========================================================================== */
+  .stats-bar {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+  }
+  .stats-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+  }
+  .stat {
+    background: var(--bg);
+    padding: 2rem 1rem;
     text-align: center;
-    color: var(--color-text-light);
-    margin-bottom: var(--spacing-xl);
-    margin-top: calc(-1 * var(--spacing-md));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--teal-600);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
   }
 
-  /* Values Section */
-  .section-values {
-    background: var(--color-bg-alt);
+  /* ==========================================================================
+     About section
+     ========================================================================== */
+  .section-about {
+    padding: 5rem 0;
+    background: var(--bg);
   }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-text {
+    padding-top: 1rem;
+  }
+  .about-text h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+  .about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .about-stats-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-card {
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+  .about-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .about-card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .about-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+  }
+  .about-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+  .about-card-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--teal-600);
+  }
+  .card-mission { border-left: 3px solid var(--teal-500); }
+  .card-vision { border-left: 3px solid var(--warm-500); }
+
+  /* ==========================================================================
+     Values
+     ========================================================================== */
+  .section-values {
+    padding: 5rem 0;
+    background: var(--teal-800);
+    color: white;
+  }
+  .section-values .section-header h2 { color: white; }
 
   .values-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
   }
-
   .value-card {
-    text-align: center;
-    padding: var(--spacing-xl) var(--spacing-lg);
-    background: var(--color-white);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow var(--transition), transform var(--transition);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: background var(--transition), transform var(--transition);
   }
   .value-card:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+  }
+  .value-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+  }
+  .value-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: white;
+  }
+  .value-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+
+  /* ==========================================================================
+     Projects
+     ========================================================================== */
+  .section-projects {
+    padding: 5rem 0;
+    background: var(--bg-alt);
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+  .project-card:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-3px);
   }
-
-  .value-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .value-card h3 {
-    color: var(--color-primary);
-    font-size: 1.15rem;
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .value-card p {
-    font-size: 0.95rem;
-    color: var(--color-text-light);
-  }
-
-  /* Projects Section */
-  .section-projects {
-    background: var(--color-white);
-  }
-
-  .project-card {
+  .project-card-top {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
   }
+  .project-number {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--teal-400);
+  }
+  .project-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    color: white;
+  }
+  .tag-educo { background: #764ba2; }
+  .tag-educacion { background: #f093fb; }
+  .tag-migracion { background: #4facfe; }
+  .tag-igualdad { background: #f5576c; }
+
   .project-card h3 {
-    color: var(--color-primary);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
   }
   .project-card p {
-    flex: 1;
-    font-size: 0.95rem;
-    color: var(--color-text-light);
-  }
-  .project-card .btn {
-    align-self: flex-start;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
   }
 
-  /* Instagram Section */
-  .section-instagram {
-    background: var(--color-bg-alt);
+  .projects-cta {
+    text-align: center;
+    margin-top: 2.5rem;
   }
+
+  /* ==========================================================================
+     Instagram
+     ========================================================================== */
+  .section-instagram {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--teal-800), #0f172a);
+    color: white;
+  }
+  .section-instagram .section-header h2 { color: white; }
+  .instagram-subtitle {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2.5rem;
+    margin-top: -2rem;
+  }
+  .instagram-subtitle a { color: var(--teal-300); }
 
   .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
   }
-
   .insta-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-lg);
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    gap: 0.75rem;
+    padding: 2rem 1rem;
+    border-radius: var(--radius);
     text-decoration: none;
-    color: var(--color-text);
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: box-shadow var(--transition), transform var(--transition);
-    aspect-ratio: 1;
-  }
-  .insta-card:hover {
+    color: white;
     box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-    text-decoration: none;
-    color: var(--color-primary);
-  }
-  .insta-icon {
-    font-size: 2rem;
-  }
-
-  /* CTA Section */
-  .section-cta {
-    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
-    color: var(--color-white);
+    aspect-ratio: 1;
+    transition: transform var(--transition), box-shadow var(--transition);
     text-align: center;
   }
-  .section-cta h2 {
-    color: var(--color-white);
+  .insta-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    text-decoration: none;
+    color: white;
   }
-  .section-cta p {
-    margin-bottom: var(--spacing-lg);
-    font-size: 1.1rem;
-    opacity: 0.95;
-  }
-  .cta-actions {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .section-cta .btn-outline {
-    border-color: var(--color-white);
-    color: var(--color-white);
-  }
-  .section-cta .btn-outline:hover {
-    background: var(--color-white);
-    color: var(--color-accent-dark);
+  .insta-icon { opacity: 0.9; }
+  .insta-label {
+    font-size: 0.85rem;
+    font-weight: 600;
   }
 
+  /* ==========================================================================
+     CTA
+     ========================================================================== */
+  .section-cta {
+    padding: 5rem 0;
+    background: var(--bg);
+  }
+  .cta-box {
+    background: linear-gradient(135deg, var(--teal-600), var(--teal-800));
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: var(--shadow-lg);
+  }
+  .cta-content h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0.75rem;
+  }
+  .cta-content p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.05rem;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+  .btn-cta-primary {
+    padding: 0.8rem 1.8rem;
+    background: white;
+    color: var(--teal-700);
+    font-weight: 700;
+    border-radius: 999px;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .btn-cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    color: var(--teal-700);
+  }
+  .btn-cta-secondary {
+    padding: 0.8rem 1.8rem;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: background var(--transition), border-color var(--transition);
+  }
+  .btn-cta-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+    color: white;
+  }
+
+  /* ==========================================================================
+     Regularization banner
+     ========================================================================== */
+  .section-regularization {
+    padding: 0 0 5rem;
+    background: var(--bg);
+  }
+  .reg-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: var(--warm-50);
+    border: 1px solid var(--warm-200);
+    border-radius: var(--radius);
+  }
+  .reg-icon { font-size: 2rem; flex-shrink: 0; }
+  .reg-text { flex: 1; }
+  .reg-text h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem; }
+  .reg-text p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+  .reg-banner .btn { flex-shrink: 0; }
+
+  /* ==========================================================================
+     Mobile
+     ========================================================================== */
   @media (max-width: 768px) {
-    .hero {
-      min-height: 60vh;
-    }
-    .instagram-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .hero { min-height: 65vh; padding: 4rem 1.5rem; }
+
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat { padding: 1.25rem 0.5rem; }
+    .stat-number { font-size: 1.5rem; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+    .cta-box { flex-direction: column; text-align: center; padding: 2.5rem 1.5rem; }
+    .cta-buttons { justify-content: center; }
+
+    .reg-banner { flex-direction: column; text-align: center; }
+
+    .instagram-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
