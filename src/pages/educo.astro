@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Slideshow from '../components/Slideshow.astro';
 ---
 
 <Layout title="EDUCO — Voces de la Infancia Migrante">
@@ -9,95 +10,42 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <div class="page-content">
-    <p><strong>EDUCO</strong> es un proyecto que promueve el bienestar, la inclusión social y la convivencia intercultural de niños, niñas y adolescentes migrantes a través de actividades socioeducativas, artísticas y comunitarias.</p>
+    <Slideshow images={[
+      "/images/slideshow/educo-capture-decran-2025-11-27-134222.png",
+      "/images/slideshow/educo-whatsapp-image-2025-10-06-at-11.25.31-1.jpeg",
+      "/images/slideshow/educo-whatsapp-image-2025-10-17-at-18.36.51-2.jpeg",
+      "/images/slideshow/educo-whatsapp-image-2025-10-17-at-18.36.521-1.jpeg",
+      "/images/slideshow/educo-whatsapp-image-2025-10-17-at-18.37.21-1.jpeg",
+      "/images/slideshow/educo-whatsapp-image-2025-10-17-at-18.37.222-edited.jpeg",
+      "/images/slideshow/educo-whatsapp-image-2025-10-17-at-18.37.38-2.jpeg",
+      "/images/slideshow/educo-whatsapp-image-2025-11-08-at-16.50.43-1.jpeg"
+    ]} alt="Actividades EDUCO" />
+
+    <p>El proyecto <strong>"Voces de la Infancia Migrante"</strong> nace con el objetivo de promover el bienestar, la inclusión social y la convivencia intercultural de niños, niñas y adolescentes mediante actividades socioeducativas, artísticas y comunitarias que fortalecen su participación, su protección y su integración en el barrio.</p>
+
+    <p>Esto nos lleva a formar parte de la estrategia del Centro Sociocultural Zaidín para garantizar entornos seguros, libres de discriminación y violencia, favoreciendo el desarrollo integral de la infancia y juventud que vive en situación de vulnerabilidad.</p>
 
     <h2>Actividades</h2>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>🎭 Talleres artísticos</h3>
-        <p>Teatro, improvisación, expresión corporal y títeres como herramientas de expresión y desarrollo personal.</p>
-      </div>
-      <div class="card">
-        <h3>🛡️ Sensibilización</h3>
-        <p>Talleres de concienciación sobre violencia y derechos de la infancia.</p>
-      </div>
-      <div class="card">
-        <h3>🤝 Convivencia</h3>
-        <p>Actividades comunitarias que fomentan el encuentro y el diálogo intercultural.</p>
-      </div>
-    </div>
+    <h3>Talleres de sensibilización contra la violencia</h3>
+    <p>A través de dinámicas participativas, debates guiados y actividades de reflexión, los niños y niñas analizan distintas formas de violencia y desigualdad presentes en su entorno. Estos espacios fomentan valores de igualdad, respeto y convivencia intercultural.</p>
 
-    <div class="educo-gallery">
-      <figure>
-        <img src="/images/educo-whatsapp1.jpeg" alt="Taller artístico con niños y niñas" loading="lazy" />
-        <figcaption>Taller artístico del proyecto EDUCO</figcaption>
-      </figure>
-      <figure>
-        <img src="/images/educo-whatsapp2.jpeg" alt="Actividad con adolescentes" loading="lazy" />
-        <figcaption>Actividades con adolescentes del barrio</figcaption>
-      </figure>
-      <figure>
-        <img src="/images/educo-whatsapp3.jpeg" alt="Taller de títeres y expresión" loading="lazy" />
-        <figcaption>Taller de títeres y expresión artística</figcaption>
-      </figure>
-    </div>
+    <h3>Talleres artísticos</h3>
+    <p>El proyecto incorpora talleres de performance artística e improvisación, donde la infancia utiliza el cuerpo y el movimiento como herramientas de expresión personal y colectiva. Estas actividades fortalecen la autoestima, la creatividad y la capacidad de comunicar.</p>
+    <p>Se desarrolla un proceso teatral adaptado a la infancia y adolescencia del barrio, utilizando títeres y narrativas creadas por ellos y ellas mismas. El teatro permite trabajar emociones, habilidades sociales, resolución pacífica de conflictos y expresión artística desde una perspectiva segura e inclusiva.</p>
 
-    <p>A través del arte y la participación, los niños y adolescentes migrantes encuentran un espacio seguro donde expresarse, compartir sus experiencias y construir un futuro más inclusivo.</p>
+    <h2>Objetivos del proyecto</h2>
+    <p>El proyecto tiene como finalidad promover el bienestar y la protección integral de la infancia del Zaidín, creando espacios seguros donde puedan expresarse, desarrollarse y participar activamente en la vida del barrio. A través de actividades educativas, artísticas y comunitarias, se busca prevenir situaciones de violencia, fomentando la igualdad, el respeto y la convivencia intercultural.</p>
+    <p>El proyecto también pretende fortalecer la autoestima, las habilidades sociales y la participación de niños, niñas y adolescentes, impulsando una comunidad más inclusiva, diversa y cohesionada.</p>
+
+    <h2>Valor del proyecto en el barrio</h2>
+    <p>Gracias a este programa, la infancia migrante del Zaidín dispone de:</p>
+    <ul>
+      <li>Un espacio seguro</li>
+      <li>Actividades educativas</li>
+      <li>Herramientas para reconocer y denunciar violencias</li>
+      <li>Oportunidades de expresión artística y participación comunitaria</li>
+      <li>Apoyo para construir una convivencia intercultural basada en el respeto</li>
+    </ul>
   </div>
 </Layout>
-
-<style>
-  .educo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-md);
-    margin: var(--spacing-lg) 0;
-  }
-
-  .educo-gallery figure {
-    margin: 0;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .educo-gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .educo-gallery img:hover {
-    transform: scale(1.05);
-  }
-
-  .educo-gallery figcaption {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: 0.85rem;
-    color: var(--color-text-light);
-    text-align: center;
-    background: var(--color-bg-alt);
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
-    margin: var(--spacing-lg) 0;
-  }
-
-  .card {
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow var(--transition), transform var(--transition);
-  }
-  .card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-  }
-</style>

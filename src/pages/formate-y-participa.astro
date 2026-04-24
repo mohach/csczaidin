@@ -1,37 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Slideshow from '../components/Slideshow.astro';
 ---
 
-<Layout title="FÓRMATE Y PARTICIPA" description="Igualdad de género: cafés tertulia, talleres artesanales, sensibilización contra la violencia machista y formación TIC.">
+<Layout title="Fórmate y Participa — Igualdad de Género">
   <section class="page-hero">
-    <h1>FÓRMATE Y PARTICIPA</h1>
-    <p class="subtitle">Igualdad de género y empoderamiento de las mujeres</p>
+    <h1>Fórmate y Participa</h1>
+    <p class="subtitle">Sensibilización y fomento de la igualdad entre mujeres y hombres</p>
   </section>
 
   <div class="page-content">
-    <p>Proyecto centrado en la promoción de la igualdad de género y el empoderamiento de las mujeres del barrio del Zaidín.</p>
+    <Slideshow images={[
+      "/images/slideshow/formate-imagen.png"
+    ]} alt="Fórmate y Participa" />
+
+    <p>El proyecto <strong>Fórmate y Participa</strong> tiene como objetivo sensibilizar y fomentar la igualdad entre mujeres y hombres en el barrio del Zaidín. Para ello, se ofertan actividades formativas, espacios de encuentro y acciones de dinamización comunitaria.</p>
 
     <h2>Actividades</h2>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>☕ Café Tertulia</h3>
-        <p>Encuentros mensuales de mujeres para compartir experiencias y debatir sobre temas de interés. Participan <strong>~25 mujeres</strong>.</p>
-      </div>
-      <div class="card">
-        <h3>🧵 Taller de manualidades</h3>
-        <p>Taller semanal donde <strong>15 mujeres</strong> desarrollan su creatividad mientras construyen redes de apoyo mutuo.</p>
-      </div>
-      <div class="card">
-        <h3>✊ Contra la violencia de género</h3>
-        <p>Concentración mensual con la <strong>Red de Mujeres del Zaidín</strong>. Actos especiales el <strong>8 de marzo</strong> y <strong>25 de noviembre</strong>.</p>
-      </div>
-      <div class="card">
-        <h3>💻 Taller de informática básica</h3>
-        <p>Formación en competencias digitales básicas para reducir la brecha digital de género.</p>
-      </div>
-    </div>
+    <h3>Café Tertulia</h3>
+    <p>Consiste en la realización de encuentros abiertos y participativos de formación, una vez al mes, en los que se abordan temas que contribuyan a la mejora de capacidades y habilidades, la autoestima y el empoderamiento, y la promoción de la salud y prevención de enfermedades con enfoque de género.</p>
+    <p>Estos encuentros estimulan al grupo de mujeres beneficiarias en la capacidad de evaluar, hacer crítica, reflexionar, discernir y extraer sus propias decisiones y conclusiones sobre la realidad social que vivimos. Asiste un promedio de <strong>25 mujeres por actividad</strong> con un perfil intergeneracional e intercultural.</p>
 
-    <p>Creemos que la igualdad de género no es solo un objetivo, sino el camino hacia una sociedad más justa y participativa para todas las personas.</p>
+    <h3>Taller de artesanía</h3>
+    <p>Taller participativo cuyas premisas son el reciclaje de materiales y el fomento de la creatividad. Se aprende la elaboración de productos útiles a partir de materiales reciclados para su total aprovechamiento y ahorro de costes. El taller se configura como un instrumento de apoyo mutuo, solidaridad y refuerzo del grupo. Se lleva a cabo semanalmente, los miércoles, con un grupo de <strong>15 mujeres</strong>.</p>
+
+    <h3>Actividades de sensibilización en igualdad y prevención de la violencia de género</h3>
+    <p>La finalidad es visibilizar y concienciar sobre la violencia y la discriminación que sufren las mujeres por razón de sexo, y promover su participación en condiciones de igualdad. Todos los primeros viernes de cada mes, junto a la Red de Mujeres del Zaidín, se lleva a cabo una concentración contra la violencia de género.</p>
+    <p>Participamos activamente el <strong>8 de marzo</strong> (Día Internacional de la Mujer) y el <strong>25 de noviembre</strong> (Día Internacional de la Eliminación de la Violencia de Género), realizando actividades de sensibilización durante las semanas previas.</p>
+
+    <h3>Taller de informática</h3>
+    <p>Con el objetivo de promover el acceso a las nuevas tecnologías entre las personas adultas, se desarrolla un taller grupal de informática básica. El aprendizaje se dirige también a la adquisición de conocimientos sobre búsqueda de empleo por internet, vivienda, gestión de citas y cualquier demanda que las usuarias del taller planteen. El taller se lleva a cabo semanalmente, con un máximo de <strong>20 personas</strong> por grupo.</p>
   </div>
 </Layout>

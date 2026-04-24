@@ -1,38 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Slideshow from '../components/Slideshow.astro';
 ---
 
-<Layout title="EDUCA ZAIDIN" description="Apoyo socioeducativo para familias y menores de 6 a 16 años en riesgo de fracaso escolar. Centro Sociocultural Zaidín.">
+<Layout title="EDUCA ZAIDIN — Apoyo Socioeducativo">
   <section class="page-hero">
     <h1>EDUCA ZAIDIN</h1>
-    <p class="subtitle">Apoyo socioeducativo para familias y menores</p>
+    <p class="subtitle">Apoyo y acompañamiento socioeducativo a familias y menores</p>
   </section>
 
   <div class="page-content">
-    <p>Proyecto de apoyo socioeducativo dirigido a familias y menores de <strong>6 a 16 años</strong> en situación de riesgo de fracaso escolar, exclusión social o vulnerabilidad.</p>
+    <Slideshow images={[
+      "/images/slideshow/educazaidin-img_6241.jpg",
+      "/images/slideshow/educazaidin-img_6242.jpg",
+      "/images/slideshow/educazaidin-img_6282.jpg",
+      "/images/slideshow/educazaidin-whatsapp-image-2019-07-08-at-4.32.09-pm.jpeg",
+      "/images/slideshow/educazaidin-whatsapp-image-2019-07-22-at-6.12.57-pm.jpeg"
+    ]} alt="Actividades EDUCA ZAIDIN" />
 
-    <h2>Objetivos</h2>
-    <ul>
-      <li>Integración social de las familias en el barrio</li>
-      <li>Desarrollo psicoeducativo de los menores</li>
-      <li>Éxito educativo y prevención del abandono escolar</li>
-      <li>Promoción de un ocio saludable y educativo</li>
-    </ul>
+    <p>Desde el proyecto <strong>Educa Zaidín</strong> se proporciona apoyo y acompañamiento socioeducativo a familias y menores del barrio. El perfil de los beneficiarios son familias con niños, niñas y adolescentes de edades comprendidas entre 6 y 16 años que presentan trayectorias de fracaso escolar desde los primeros años de escolarización: dificultades de adaptación a la escuela, falta de hábitos y normas, dificultades en el aprendizaje, discontinuidad en la asistencia a clase, etc. A lo que se unen situaciones de vulnerabilidad social en las familias de origen: familias monoparentales, padres y/o madres en situación de desempleo, familias numerosas y familias de origen migrante, falta de red de apoyo, etc.</p>
+
+    <h2>Objetivo</h2>
+    <p>Favorecer el desarrollo integral de los/as menores y sus familias en condiciones de igualdad, aplicando la perspectiva transversal de género y de interculturalidad en nuestra labor.</p>
 
     <h2>Actividades</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>📚 Apoyo escolar</h3>
-        <p>Atendemos a <strong>55 niños y niñas</strong> en 3 grupos (A, B y C) con refuerzo de tareas escolares y hábitos de estudio.</p>
-      </div>
-      <div class="card">
-        <h3>🧠 Orientación psicopedagógica</h3>
-        <p>Acompañamiento individualizado para abordar dificultades de aprendizaje y desarrollo personal.</p>
-      </div>
-      <div class="card">
-        <h3>🎪 Actividades culturales y de ocio</h3>
-        <p>Salidas, talleres y eventos que fomentan un uso positivo del tiempo libre.</p>
-      </div>
-    </div>
+
+    <h3>Refuerzo escolar</h3>
+    <p>Ante las situaciones manifiestas de dificultad en el ámbito escolar y familiar, y como herramienta de prevención del absentismo y/o fracaso escolar de los/as menores de la zona, se oferta este taller de refuerzo escolar en el que el equipo de monitores/as y voluntarios apoyan a los/as menores en las tareas escolares (lógica y cálculo matemático, gramática, ortografía y comprensión lectora, ciencias, etc.), la mejora y/o adquisición de técnicas de estudio y actividades de animación a la lectura.</p>
+    <p>Se ofertan tres grupos según niveles: Grupo A (1º, 2º y 3º de Primaria), Grupo B (4º, 5º y 6º de Primaria) y Grupo C (1º a 4º de la ESO). En este taller participan un total de <strong>55 niños y niñas</strong>.</p>
+
+    <h3>Orientación y apoyo psicopedagógico</h3>
+    <p>Por un lado, lleva a cabo intervención individual familiar en la que, desde la implicación activa de las familias, se presta asesoramiento psicopedagógico para la mejora de la convivencia en el seno familiar. De manera paralela, las familias participan en un taller grupal de crecimiento psicopedagógico para adquirir competencias para el desarrollo de la parentalidad positiva.</p>
+
+    <h3>Actividades lúdico-culturales</h3>
+    <p>Son actividades lúdico-educativas con los menores dirigidas a la cohesión del grupo y la participación en el barrio. Desde una perspectiva de educación en valores, se llevan a cabo jornadas para trabajar la educación para la paz, convivencia intercultural e igualdad de género. A su vez, desde el trabajo en red con las entidades sociales del barrio, se realizan actividades de dinamización comunitaria como gymkanas, juegos deportivos, celebraciones y salidas por el campo y la ciudad.</p>
+
+    <h3>Escuela de Verano</h3>
+    <p>Fruto de la propia demanda manifiesta de las familias para conciliar su vida laboral con los tiempos de vacaciones de sus hijos/as, así como por motivos de precariedad de recursos económicos, se oferta durante el mes de julio la escuela de verano, que da continuidad al proceso socioeducativo realizado con los menores. Esta escuela es una alternativa educativa de ocio y tiempo libre desde la igualdad de género y el respeto a la diversidad, proporcionando un servicio de comedor para asegurar una alimentación saludable y equilibrada.</p>
+    <p>Un total de <strong>75 menores</strong> participan en la Escuela de Verano.</p>
   </div>
 </Layout>

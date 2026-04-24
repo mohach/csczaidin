@@ -1,33 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Slideshow from '../components/Slideshow.astro';
 ---
 
-<Layout title="TODOS SOMOS ZAIDIN" description="Integración de vecinos migrantes: clases de español, preparación de nacionalidad y acompañamiento social.">
+<Layout title="TODOS SOMOS ZAIDIN — Integración y Convivencia Intercultural">
   <section class="page-hero">
     <h1>TODOS SOMOS ZAIDIN</h1>
-    <p class="subtitle">Integración de vecinos migrantes</p>
+    <p class="subtitle">Integración social y convivencia intercultural</p>
   </section>
 
   <div class="page-content">
-    <p>Proyecto dirigido a la integración de las personas migrantes en el barrio del Zaidín, promoviendo la convivencia intercultural y el acceso a derechos y recursos.</p>
+    <Slideshow images={[
+      "/images/slideshow/todosomos-img_6249.jpg",
+      "/images/slideshow/todosomos-img_6257.jpg",
+      "/images/slideshow/todosomos-t.-interculturalidad.jpg",
+      "/images/slideshow/todosomos-imagen-1.png",
+      "/images/slideshow/todosomos-img_6329.jpg"
+    ]} alt="Actividades Todos Somos Zaidín" />
+
+    <p>Este proyecto surge con el objetivo de <strong>apoyar la integración social de los/as vecinos/as de origen migrante del Zaidín</strong>, potenciando la convivencia intercultural en el barrio a través del conocimiento mutuo y el acercamiento, y de un apoyo y acompañamiento personal, social y laboral de las personas migrantes.</p>
+
+    <p>Para ello, se ofrece un servicio específico de acogida y acompañamiento a la población inmigrante, a la vez que se ponen en marcha actividades de formación y espacios de encuentro intercultural.</p>
 
     <h2>Actividades</h2>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>🇪🇸 Clases de español</h3>
-        <p>Grupos de mañana y tarde en <strong>3 niveles</strong> más un grupo de alfabetización. Atendemos a <strong>~55 personas</strong>.</p>
-      </div>
-      <div class="card">
-        <h3>📋 Preparación nacionalidad</h3>
-        <p>Preparamos los exámenes <strong>CCSE</strong> (conocimientos constitucionales y socioculturales) y <strong>DELE-A2</strong> para la obtención de la nacionalidad española. Atendemos a unas <strong>15 personas</strong>.</p>
-      </div>
-      <div class="card">
-        <h3>🤝 Información y acompañamiento</h3>
-        <p>Orientación sobre recursos, trámites administrativos, regularización y acceso a servicios públicos.</p>
-      </div>
-    </div>
+    <h3>Taller de castellano</h3>
+    <p>Este taller tiene como objetivo mejorar la comunicación de las personas migrantes en la sociedad de acogida y su desenvolvimiento en el entorno a partir del conocimiento del idioma. Se oferta en dos turnos (mañana y tarde) para cubrir la alta demanda y que el alumnado pueda conciliar la formación con el trabajo y las tareas de cuidados.</p>
+    <p>Se ofertan de manera simultánea tres grupos de nivel: básico, intermedio y avanzado, más un grupo específico de alfabetización. Asisten con interés y motivación unas <strong>55 personas</strong> de distintas nacionalidades, siendo en su mayoría jóvenes de 20 a 40 años.</p>
 
-    <p>Creemos en un barrio donde todas las personas, independientemente de su origen, tengan las mismas oportunidades de participación y desarrollo.</p>
+    <h3>Clases de preparación para la obtención de la nacionalidad española</h3>
+    <p>Con el fin de dotar al alumnado de las herramientas necesarias para la preparación de los exámenes que permiten iniciar el expediente de nacionalización (convocados por el Instituto Cervantes), se realiza un taller que abarca:</p>
+    <ul>
+      <li><strong>Examen CCSE</strong>: conocimiento constitucional y sociocultural de España</li>
+      <li><strong>Examen DELE A2</strong>: comprensión lectora, expresión escrita, comprensión auditiva y expresión oral</li>
+      <li><strong>Gestión burocrática</strong>: inscripción telemática y pago, facilitando el acceso a quienes carecen de medios informáticos</li>
+    </ul>
+    <p>Al taller asiste un grupo de <strong>15 personas</strong> de distintas nacionalidades.</p>
+
+    <h3>Información y acompañamiento social</h3>
+    <p>Este servicio responde a las necesidades relativas al acceso de la población inmigrante a los recursos y servicios de carácter social y laboral. Se realizan gestiones de información, derivación y acompañamiento necesarias para una adecuada integración en la sociedad de acogida:</p>
+    <ul>
+      <li>Derivación a recursos de orientación laboral y ofertas de empleo</li>
+      <li>Acompañamiento al Centro de Salud para acceso a la sanidad pública</li>
+      <li>Derivación a Servicios Sociales para ayudas de vivienda, luz y alimentos</li>
+      <li>Derivación al servicio de asesoramiento jurídico</li>
+      <li>Apoyo psicológico</li>
+    </ul>
+
+    <h3>Mañanas de té y actividades interculturales</h3>
+    <p>A través de actividades lúdicas y de corte reivindicativo, campañas, eventos y fiestas, se pretende poner de manifiesto que son numerosas las culturas que convivimos en el barrio, fomentando el conocimiento mutuo y el acercamiento entre la población de acogida y la población migrante, y denunciando conjuntamente las actitudes racistas y/o xenófobas.</p>
+
+    <h3>Huerto ecológico comunitario</h3>
+    <p>Esta actividad surge desde el trabajo en red con la asociación <strong>Somos Vega, Somos Tierra</strong>, y tiene como objetivo el fomento del autoempleo en la agricultura ecológica como impulso a la economía social y comunitaria bajo los principios de la ecología. Está destinado a personas en situación de desempleo o precariedad laboral.</p>
   </div>
 </Layout>
