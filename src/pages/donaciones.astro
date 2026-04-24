@@ -3,103 +3,233 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Donaciones" description="Colabora con el Centro Sociocultural Zaidín a través de tus donaciones.">
-  <section class="page-hero">
+  <section class="page-hero donate-hero">
+    <div class="hero-pattern" aria-hidden="true"></div>
     <h1>Donaciones</h1>
     <p class="subtitle">Con tu apoyo construimos un barrio y una sociedad más justa</p>
   </section>
 
-  <section class="page-content">
-    <div class="donation-intro card">
-      <p>
-        Con tu apoyo estarás colaborando en la construcción de un barrio y una sociedad más justa.
-        Gracias a personas como tú, seguimos avanzando en los diferentes proyectos que llevamos a cabo en Granada.
-      </p>
-      <p class="highlight-text">¡Suma con el Centro Sociocultural Zaidín!</p>
+  <div class="page-content">
+    <!-- Impact counter / intro -->
+    <div class="donate-intro">
+      <p>Tu donación se traduce en recursos para los proyectos que transforman el barrio del Zaidín: apoyo escolar, clases de español, talleres de igualdad, espacios seguros para la infancia y mucho más.</p>
+      <p class="donate-intro-highlight"><strong>Gracias a personas como tú, seguimos avanzando.</strong> ¡Suma con el Centro Sociocultural Zaidín!</p>
     </div>
 
-    <h2>Formas de colaboración</h2>
+    <!-- Two column on desktop: main method + sidebar info -->
+    <div class="donate-columns">
+      <!-- Left / main: bank transfer -->
+      <div class="donate-main">
+        <div class="donate-card donate-card-primary">
+          <div class="donate-card-header">
+            <span class="donate-icon">🏦</span>
+            <h2>Transferencia bancaria</h2>
+          </div>
+          <p>Realiza tu donación mediante transferencia o ingreso a nuestra cuenta. Cada aportación, grande o pequeña, marca la diferencia.</p>
 
-    <h3>💳 Transferencia o ingreso bancario</h3>
-    <div class="bank-info card">
-      <p><strong>Entidad:</strong> CaixaBank</p>
-      <p><strong>IBAN:</strong> <code>ES86 2100 2294 0201 0074 7644</code></p>
+          <div class="bank-details">
+            <div class="bank-row">
+              <span class="bank-label">Entidad</span>
+              <span class="bank-value">CaixaBank</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Titular</span>
+              <span class="bank-value">Centro Sociocultural Zaidín</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">IBAN</span>
+              <span class="bank-value iban">ES86 2100 2294 0201 0074 7644</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-label">Concepto</span>
+              <span class="bank-value concept">Donación CSCZ</span>
+            </div>
+          </div>
+
+          <button class="btn-copy" id="copyIban" data-iban="ES8621002294020100747644">
+            <span id="copyLabel">📋 Copiar IBAN</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right / sidebar -->
+      <div class="donate-sidebar">
+        <div class="donate-card">
+          <div class="donate-card-header">
+            <span class="donate-icon">📄</span>
+            <h2>Certificado de donación</h2>
+          </div>
+          <p>Si deseas recibir tu certificado fiscal de donación, envíanos un email con tus datos y el comprobante de la transferencia.</p>
+          <a href="mailto:csazaidin@yahoo.es?subject=Certificado%20de%20donación" class="donate-btn">csazaidin@yahoo.es →</a>
+        </div>
+
+        <div class="donate-card">
+          <div class="donate-card-header">
+            <span class="donate-icon">❤️</span>
+            <h2>Hazte socio o socia</h2>
+          </div>
+          <p>Además de las donaciones puntuales, puedes hacerte socio o socia y colaborar de forma periódica. Cada cuota ayuda a sostener nuestros proyectos durante todo el año.</p>
+          <a href="/contacto/" class="donate-btn">Pide información →</a>
+        </div>
+
+        <div class="donate-card donate-card-highlight">
+          <div class="donate-card-header">
+            <span class="donate-icon">💪</span>
+            <h2>Otras formas de ayudar</h2>
+          </div>
+          <ul class="help-list">
+            <li>Hazte voluntario o voluntaria</li>
+            <li>Difunde nuestro trabajo en redes</li>
+            <li>Participa en nuestras actividades</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <div class="certificate-info card">
-      <h3>📄 Certificado de donación</h3>
-      <p>
-        Si quieres recibir tu certificado de donación, envíanos un email a
-        <a href="mailto:csazaidin@yahoo.es"><strong>csazaidin@yahoo.es</strong></a>
-        con tu nombre completo, DNI y comprobante de la transferencia o ingreso.
-      </p>
+    <!-- Bottom CTA -->
+    <div class="donate-cta">
+      <p>Porque otro barrio es posible. Construyámoslo juntos.</p>
+      <p class="donate-tagline">Igualdad · Integración · Participación</p>
     </div>
-  </section>
+  </div>
 </Layout>
 
-<style>
-  .donation-intro {
-    text-align: center;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    background: var(--color-accent-light);
-    border-color: var(--color-accent);
+<script>
+  document.getElementById('copyIban')?.addEventListener('click', function() {
+    const iban = this.dataset.iban;
+    navigator.clipboard.writeText(iban).then(function() {
+      const label = document.getElementById('copyLabel');
+      label.textContent = '✅ ¡Copiado!';
+      setTimeout(function() { label.textContent = '📋 Copiar IBAN'; }, 2500);
+    }).catch(function() {
+      const label = document.getElementById('copyLabel');
+      label.textContent = '⚠️ No se pudo copiar';
+    });
+  });
+</script>
+
+<style is:global>
+  .donate-hero {
+    background: linear-gradient(135deg, var(--green) 0%, #065f46 100%) !important;
+    position: relative;
+    overflow: hidden;
+  }
+  .donate-hero h1 { font-size: 2rem; }
+  .donate-hero .subtitle { color: rgba(255,255,255,0.85); }
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.08;
+    background-image: radial-gradient(circle at 25% 25%, #fff 1px, transparent 1px);
+    background-size: 30px 30px;
   }
 
-  .highlight-text {
-    font-weight: 700;
-    color: var(--color-accent);
-    font-size: 1.3rem;
-    margin-top: var(--spacing-md);
+  .donate-intro {
+    max-width: 600px; margin: 0 auto 2rem; text-align: center;
+    font-size: 1.05rem; line-height: 1.7;
+    color: var(--g500);
+  }
+  .donate-intro-highlight {
+    font-size: 1.15rem; color: var(--g700); margin-top: 0.5rem;
   }
 
-  .bank-info {
-    background: var(--color-primary-light);
-    border-color: var(--color-primary);
+  .donate-columns {
+    display: grid; grid-template-columns: 1fr; gap: 1rem;
+    align-items: start;
   }
 
-  .bank-info code {
-    display: inline-block;
-    background: var(--color-white);
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--color-text);
-    margin-top: var(--spacing-sm);
+  .donate-card {
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+  }
+  .donate-card-primary {
+    border-color: var(--green-light);
+    border-width: 2px;
+  }
+  .donate-card-highlight {
+    background: linear-gradient(135deg, var(--g50), #eff6ff);
+    border-color: var(--g200);
+  }
+  .donate-card-header {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .donate-card-header h2 {
+    font-size: 1.1rem; font-weight: 700; color: var(--g700);
+    margin: 0;
+  }
+  .donate-icon { font-size: 1.4rem; }
+
+  .donate-card p {
+    font-size: 0.95rem; color: var(--g500);
+    line-height: 1.6; margin-bottom: 1rem;
+  }
+
+  .bank-details {
+    display: grid; gap: 0;
+    margin: 1rem 0;
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+  .bank-row {
+    display: flex; flex-wrap: wrap; gap: 0.25rem;
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--g100);
+  }
+  .bank-row:last-child { border-bottom: none; }
+  .bank-label {
+    font-size: 0.8rem; color: var(--g400); text-transform: uppercase;
+    letter-spacing: 0.05em; font-weight: 600; min-width: 80px;
+  }
+  .bank-value {
+    font-size: 0.9rem; color: var(--g700); font-weight: 600;
+  }
+  .iban {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem; letter-spacing: 1px;
     word-break: break-all;
   }
+  .concept { color: var(--green); }
 
-  .certificate-info {
-    margin-top: var(--spacing-lg);
+  .btn-copy {
+    width: 100%; padding: 0.7rem 1rem; border: 2px solid var(--green);
+    background: var(--w); color: var(--green); font-weight: 700;
+    border-radius: var(--r); cursor: pointer; font-size: 0.95rem;
+    transition: all 0.2s;
   }
+  .btn-copy:hover { background: var(--green); color: #fff; }
 
-  .certificate-info h3 {
-    color: var(--color-primary) !important;
+  .donate-btn {
+    display: inline-block; padding: 0.5rem 1.2rem;
+    background: var(--green); color: #fff !important; text-decoration: none !important;
+    border-radius: var(--r); font-weight: 600; font-size: 0.9rem;
+    transition: background 0.2s;
   }
+  .donate-btn:hover { background: var(--green-dark); }
 
-  .card {
-    padding: var(--spacing-lg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-lg);
+  .help-list {
+    list-style: none; margin: 0; padding: 0;
   }
-
-  h2 {
-    font-size: 1.6rem;
-    color: var(--color-primary);
-    margin-top: var(--spacing-xl);
-    margin-bottom: var(--spacing-md);
+  .help-list li {
+    padding: 0.35rem 0; font-size: 0.95rem; color: var(--g500);
   }
+  .help-list li::before { content: '✓ '; color: var(--green); font-weight: 700; }
 
-  h3 {
-    font-size: 1.25rem;
-    color: var(--color-accent);
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-sm);
+  .donate-cta {
+    text-align: center; margin-top: 2rem; padding: 2rem 0;
+    border-top: 1px solid var(--g200);
   }
+  .donate-cta p { font-size: 1.2rem; color: var(--g500); margin-bottom: 0.5rem; }
+  .donate-tagline { color: var(--green); font-weight: 700; letter-spacing: 0.1em; }
 
-  .page-content p {
-    margin-bottom: var(--spacing-md);
+  @media (min-width: 769px) {
+    .donate-columns {
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1.5rem;
+    }
+    .donate-hero h1 { font-size: 2.5rem; }
   }
 </style>
