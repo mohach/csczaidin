@@ -153,6 +153,7 @@ const year = new Date().getFullYear();
 
       /* === Desktop Nav === */
       @media (min-width: 769px) {
+        .nav { display: flex; align-items: center; }
         .nav-toggle { display: none; }
         .nav-overlay { display: none; }
         .nav-panel {
@@ -164,6 +165,7 @@ const year = new Date().getFullYear();
           align-items: center;
           overflow: visible;
           background: none;
+          margin-left: auto; display: flex;
         }
         .nav-menu {
           display: flex;
