@@ -15,15 +15,15 @@ const year = new Date().getFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} — Centro Sociocultural Zaidín</title>
     {description && <meta name="description" content={description} />}
-    <link rel="stylesheet" href="/mobile.css" />
-    <link rel="stylesheet" href="/desktop.css" media="(min-width: 769px)" />
+    <link rel="stylesheet" href="/mobile.css?v=2" />
+    <link rel="stylesheet" href="/desktop.css?v=2" media="(min-width: 769px)" />
   </head>
   <body>
     <nav class="nav">
       <a href="/" class="nav-logo"><img src="/images/logo-cscz.jpg" alt="Centro Sociocultural Zaidín" /></a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Menú" style="display:flex!important;align-items:center;justify-content:center;width:44px;height:44px;font-size:26px;background:none;border:none;cursor:pointer;color:#334155;padding:0">
-        ☰
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
       </button>
 
       <div class="nav-overlay" id="navOverlay"></div>
