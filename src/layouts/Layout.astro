@@ -57,10 +57,11 @@ const year = new Date().getFullYear();
         position: sticky; top: 0; z-index: 100;
         background: var(--w);
         border-bottom: 1px solid var(--g200);
-        height: 56px;
+        min-height: 56px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 0 1rem;
       }
       .nav-logo { display: flex; align-items: center; }
@@ -153,7 +154,7 @@ const year = new Date().getFullYear();
 
       /* === Desktop Nav === */
       @media (min-width: 769px) {
-        .nav { display: flex; align-items: center; }
+        .nav { display: flex; align-items: center; flex-wrap: nowrap; gap: 1rem; }
         .nav-toggle { display: none; }
         .nav-overlay { display: none; }
         .nav-panel {
@@ -165,7 +166,10 @@ const year = new Date().getFullYear();
           align-items: center;
           overflow: visible;
           background: none;
-          margin-left: auto; display: flex;
+          margin-left: auto;
+          display: flex;
+          flex: 1;
+          justify-content: flex-end;
         }
         .nav-menu {
           display: flex;
@@ -290,11 +294,10 @@ const year = new Date().getFullYear();
       <div class="nav-toggle" id="navToggle" role="button" tabindex="0" aria-label="Menú">
         <span></span><span></span><span></span>
       </div>
-    </nav>
 
-    <div class="nav-overlay" id="navOverlay"></div>
+      <div class="nav-overlay" id="navOverlay"></div>
 
-    <div class="nav-panel" id="navPanel">
+      <div class="nav-panel" id="navPanel">
       <ul class="nav-menu" id="navMenu">
         <li><a href="/" class="nav-link">Inicio</a></li>
         <li><a href="/apoyo-a-la-regularizacion/" class="nav-link">Regularización</a></li>
