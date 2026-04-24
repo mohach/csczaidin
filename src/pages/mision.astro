@@ -5,40 +5,151 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Misión" description="Misión del Centro Sociocultural Zaidín — Asociación sin ánimo de lucro que promueve el desarrollo personal y comunitario en el Zaidín.">
   <section class="page-hero">
     <h1>Misión</h1>
+    <p class="subtitle">Intervención socioeducativa para un barrio más justo</p>
   </section>
 
   <div class="page-content">
-    <blockquote style="font-size: 1.3rem; border-left-width: 6px;">
-      "Creemos en un barrio que se construye desde dentro."
-    </blockquote>
+    <div class="mision-frase">
+      <p>El Centro Sociocultural Zaidín es una asociación sin ánimo de lucro que trabaja desde la <strong>intervención socioeducativa</strong> para promover el desarrollo personal y comunitario de los vecinos y vecinas del barrio, contribuyendo a mejorar sus oportunidades, su autonomía y sus condiciones de vida.</p>
+    </div>
 
-    <p>Somos una asociación sin ánimo de lucro que, a través de la <strong>intervención socioeducativa</strong>, promueve el desarrollo personal y comunitario en el barrio del Zaidín.</p>
-
-    <p>Desarrollamos acciones de <strong>prevención y promoción social</strong> dirigidas a:</p>
-
-    <div class="card-grid">
-      <div class="card">
-        <h3>👶 Menores</h3>
-        <p>Apoyo educativo y desarrollo integral de niños y adolescentes.</p>
+    <div class="mision-grid">
+      <div class="mision-img-card">
+        <img src="/images/mision-cafe-tertulia.jpg" alt="Café tertulia en el Centro Sociocultural Zaidín" loading="lazy" />
+        <div class="mision-img-text">
+          <h3>Participación</h3>
+          <p>Generamos espacios de encuentro y diálogo donde cada persona puede expresarse y participar activamente en la vida del barrio.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>👨‍👩‍👧‍👦 Familias</h3>
-        <p>Orientación y acompañamiento familiar en situación de vulnerabilidad.</p>
-      </div>
-      <div class="card">
-        <h3>🌍 Personas Migrantes</h3>
-        <p>Integración social, clases de español y acompañamiento legal.</p>
-      </div>
-      <div class="card">
-        <h3>👩 Mujeres</h3>
-        <p>Empoderamiento, igualdad de género y espacios de participación.</p>
-      </div>
-      <div class="card">
-        <h3>🧑 Jóvenes</h3>
-        <p>Formación y participación juvenil activa.</p>
+      <div class="mision-img-card">
+        <img src="/images/mision-dia-julio.jpg" alt="Actividad comunitaria en el Zaidín" loading="lazy" />
+        <div class="mision-img-text">
+          <h3>Comunidad</h3>
+          <p>Creemos en un barrio que se construye desde dentro, con la participación activa de quienes formamos parte de él.</p>
+        </div>
       </div>
     </div>
 
-    <p style="margin-top: var(--spacing-lg);">Trabajamos cada día para que el Zaidín sea un barrio más justo, inclusivo y participativo, donde cada persona encuentre las oportunidades para desarrollar su propio potencial.</p>
+    <p>Actuamos sobre la realidad social del Zaidín a través de una mirada humana, participativa y transformadora. Creemos en el poder de la educación, la convivencia y la organización comunitaria para generar cambios reales. Nuestro trabajo nace de las necesidades del barrio y se construye con la participación activa de quienes formamos parte de él.</p>
+
+    <h2>Colectivos con los que trabajamos</h2>
+    <p>Llevamos a cabo acciones de <strong>prevención y promoción social</strong> con:</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>👶 Menores y familias</h3>
+        <p>Apoyo educativo y acompañamiento familiar en situación de vulnerabilidad.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Población migrante</h3>
+        <p>Integración social, clases de español, asesoramiento legal y acompañamiento.</p>
+      </div>
+      <div class="card">
+        <h3>👩 Mujeres</h3>
+        <p>Empoderamiento, igualdad de género, prevención de violencia machista y espacios de participación.</p>
+      </div>
+      <div class="card">
+        <h3>🧑 Jóvenes</h3>
+        <p>Formación, empleabilidad y participación juvenil activa.</p>
+      </div>
+    </div>
+
+    <div class="mision-grid">
+      <div class="mision-img-card">
+        <img src="/images/mision-taller.jpg" alt="Taller en el Centro Sociocultural Zaidín" loading="lazy" />
+        <div class="mision-img-text">
+          <h3>Formación</h3>
+          <p>Cada programa está pensado para fortalecer capacidades, abrir oportunidades y fomentar una convivencia respetuosa, diversa y solidaria.</p>
+        </div>
+      </div>
+      <div class="mision-img-card">
+        <img src="/images/mision-actividad.jpg" alt="Actividad socioeducativa en el Zaidín" loading="lazy" />
+        <div class="mision-img-text">
+          <h3>Transformación</h3>
+          <p>Cuando el barrio avanza, avanzamos todas y todos. Te invitamos a conocernos, participar y ser parte activa de esta historia compartida.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>
+
+<style is:global>
+  .mision-frase {
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    border-left: 4px solid var(--green);
+  }
+  .mision-frase p { margin: 0; }
+
+  .mision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .mision-img-card {
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .mision-img-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .mision-img-text {
+    padding: 1rem 1.25rem 1.2rem;
+  }
+  .mision-img-text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green);
+    margin: 0 0 0.3rem;
+  }
+  .mision-img-text p {
+    font-size: 0.9rem;
+    color: var(--g500);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin: 1.25rem 0;
+  }
+  .card {
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow);
+  }
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green);
+    margin: 0 0 0.3rem;
+  }
+  .card p {
+    font-size: 0.88rem;
+    color: var(--g500);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 640px) {
+    .mision-grid { grid-template-columns: repeat(2, 1fr); }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
