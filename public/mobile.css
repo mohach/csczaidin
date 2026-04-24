@@ -46,27 +46,6 @@ a:hover { color: var(--green-dark); }
 }
 .nav-logo { display: flex; align-items: center; }
 .nav-logo img { height: 44px; width: auto; display: block; }
-.nav-toggle { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 110; }
-.nav-toggle span { display: block; width: 24px; height: 2.5px; background: var(--g700); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
-.nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
-.nav-overlay { display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 98; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
-.nav-overlay.show { opacity: 1; visibility: visible; }
-.nav-panel { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--w); z-index: 99; display: flex; flex-direction: column; padding: 4.5rem 1.5rem 2rem; overflow-y: auto; box-shadow: -2px 0 12px rgba(0,0,0,0.1); transition: right 0.3s ease; }
-.nav-panel.open { right: 0; }
-.nav-menu { display: block; list-style: none; }
-.nav-link { display: block; padding: 0.75rem 0; color: var(--g700); text-decoration: none; font-size: 1rem; border-bottom: 1px solid var(--g100); }
-.nav-link:hover { color: var(--green); }
-.nav-item-parent { position: relative; }
-.nav-item-parent > .nav-link { cursor: pointer; }
-.dropdown { position: static; list-style: none; padding-left: 1rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-.nav-item-parent.open .dropdown { max-height: 400px !important; }
-.dropdown-link { display: block; padding: 0.55rem 0; color: var(--g700); text-decoration: none; font-size: 0.92rem; border-bottom: 1px solid var(--g100); }
-.dropdown-link:hover { color: var(--green); }
-.nav-donate { margin: 0.75rem 0 0; }
-.btn-donate { display: inline-block; padding: 0.5rem 1.2rem; background: var(--rose); color: var(--w); border-radius: 999px; font-weight: 600; font-size: 0.9rem; text-decoration: none; }
-.btn-donate:hover { background: #e11d48; color: var(--w); }
 
 /* Page Common */
 .page-hero { padding: 2.5rem 1rem; text-align: center; background: linear-gradient(135deg, var(--green-dark), var(--green)); color: var(--w); }
@@ -91,3 +70,26 @@ a:hover { color: var(--green-dark); }
 .footer p { margin-bottom: 0.3rem; }
 .footer a { color: #6ee7b7; font-weight: 500; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding: 1rem; text-align: center; font-size: 0.82rem; color: #6a6a80; }
+
+/* ===== MOBILE ONLY (≤768px) ===== */
+@media (max-width: 768px) {
+.nav-toggle { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 110; }
+.nav-toggle span { display: block; width: 24px; height: 2.5px; background: #334155; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.nav-overlay { display: block; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 98; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+.nav-overlay.show { opacity: 1; visibility: visible; }
+.nav-panel { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: #ffffff; z-index: 99; display: flex; flex-direction: column; padding: 4.5rem 1.5rem 2rem; overflow-y: auto; box-shadow: -2px 0 12px rgba(0,0,0,0.1); transition: right 0.3s ease; }
+.nav-panel.open { right: 0; }
+.nav-menu { display: block; }
+.nav-link { display: block; padding: 0.75rem 0; border-bottom: 1px solid #f1f5f9; height: auto; font-size: 1rem; white-space: normal; }
+.nav-item-parent { position: relative; }
+.dropdown { position: static; list-style: none; padding-left: 1rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.nav-item-parent.open .dropdown { max-height: 400px !important; }
+.dropdown-link { display: block; padding: 0.55rem 0; color: #334155; text-decoration: none; font-size: 0.92rem; border-bottom: 1px solid #f1f5f9; }
+.nav-donate { margin: 0.75rem 0 0; }
+.btn-donate { display: inline-block; padding: 0.5rem 1.2rem; font-size: 0.9rem; }
+.footer-inner { flex-direction: column; gap: 1.5rem; }
+.footer-inner > div { flex: none; }
+}
