@@ -404,10 +404,14 @@ const { title, description } = Astro.props;
         border-left: 1px solid var(--gray-200);
         box-shadow: -2px 0 12px rgba(0,0,0,0.1);
         transition: right 0.3s ease; z-index: 100;
-        overflow-y: auto; display: block; flex: none;
+        overflow-y: auto; display: block;
       }
       .nav-panel.open { right: 0; }
-      .nav-menu { display: block; flex: none; list-style: none; padding: 0; margin: 0; }
+      .nav-menu { display: block; list-style: none; padding: 0; margin: 0; }
+      .nav-menu .nav-item { display: block; }
+      /* Hide inline flex rendering of nav items */
+      .nav-inner .nav-menu { position: static !important; }
+      .nav-inner .nav-menu .nav-item .nav-link { height: auto !important; }
       .nav-menu .nav-item { display: block; margin: 0; }
       .nav-menu .nav-link {
         display: block; padding: 0.75rem 0.5rem; font-size: 1rem;
@@ -435,11 +439,14 @@ const { title, description } = Astro.props;
          Desktop (≥769px)
          ============================ */
       @media (min-width: 769px) {
+        .nav { display: flex; align-items: center; }
+        .nav-inner { flex: 1; }
         .nav-toggle { display: none; }
         .nav-panel {
           position: static; width: auto; height: auto; display: flex;
           align-items: center; padding: 0; border: none;
           box-shadow: none; overflow: visible; background: none;
+          flex: 1; justify-content: flex-end;
         }
         .nav-menu {
           display: flex; flex-direction: row;
@@ -489,45 +496,45 @@ const { title, description } = Astro.props;
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
+      </div>
 
-        <div class="nav-overlay" id="navOverlay"></div>
+      <div class="nav-overlay" id="navOverlay"></div>
 
-        <div class="nav-panel" id="navPanel">
-          <ul class="nav-menu" id="navMenu">
-            <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
-            <li class="nav-item"><a href="/apoyo-a-la-regularizacion/" class="nav-link">Regularización</a></li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" onclick="return false">Conócenos ▾</a>
-              <ul class="dropdown">
-                <li><a href="/nuestra-historia/" class="dropdown-link">Nuestra Historia</a></li>
-                <li><a href="/mision/" class="dropdown-link">Misión</a></li>
-                <li><a href="/vision/" class="dropdown-link">Visión</a></li>
-                <li><a href="/valores/" class="dropdown-link">Valores</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" onclick="return false">Proyectos ▾</a>
-              <ul class="dropdown">
-                <li><a href="/educo/" class="dropdown-link">EDUCO</a></li>
-                <li><a href="/educa-zaidin/" class="dropdown-link">EDUCA ZAIDIN</a></li>
-                <li><a href="/eracis/" class="dropdown-link">ERACIS</a></li>
-                <li><a href="/todos-somos-zaidin/" class="dropdown-link">Todos Somos Zaidín</a></li>
-                <li><a href="/formate-y-participa/" class="dropdown-link">Fórmate y Participa</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" onclick="return false">Transparencia ▾</a>
-              <ul class="dropdown">
-                <li><a href="/organigrama/" class="dropdown-link">Organigrama</a></li>
-                <li><a href="/memorias/" class="dropdown-link">Memorias</a></li>
-                <li><a href="/planes-y-protocolos/" class="dropdown-link">Planes y Protocolos</a></li>
-                <li><a href="/colaboradores/" class="dropdown-link">Colaboradores</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a href="/contacto/" class="nav-link">Contacto</a></li>
-            <li class="nav-item nav-donate"><a href="/donaciones/" class="btn-donate">❤️ Donar</a></li>
-          </ul>
-        </div>
+      <div class="nav-panel" id="navPanel">
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="/apoyo-a-la-regularizacion/" class="nav-link">Regularización</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" onclick="return false">Conócenos ▾</a>
+            <ul class="dropdown">
+              <li><a href="/nuestra-historia/" class="dropdown-link">Nuestra Historia</a></li>
+              <li><a href="/mision/" class="dropdown-link">Misión</a></li>
+              <li><a href="/vision/" class="dropdown-link">Visión</a></li>
+              <li><a href="/valores/" class="dropdown-link">Valores</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" onclick="return false">Proyectos ▾</a>
+            <ul class="dropdown">
+              <li><a href="/educo/" class="dropdown-link">EDUCO</a></li>
+              <li><a href="/educa-zaidin/" class="dropdown-link">EDUCA ZAIDIN</a></li>
+              <li><a href="/eracis/" class="dropdown-link">ERACIS</a></li>
+              <li><a href="/todos-somos-zaidin/" class="dropdown-link">Todos Somos Zaidín</a></li>
+              <li><a href="/formate-y-participa/" class="dropdown-link">Fórmate y Participa</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" onclick="return false">Transparencia ▾</a>
+            <ul class="dropdown">
+              <li><a href="/organigrama/" class="dropdown-link">Organigrama</a></li>
+              <li><a href="/memorias/" class="dropdown-link">Memorias</a></li>
+              <li><a href="/planes-y-protocolos/" class="dropdown-link">Planes y Protocolos</a></li>
+              <li><a href="/colaboradores/" class="dropdown-link">Colaboradores</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/contacto/" class="nav-link">Contacto</a></li>
+          <li class="nav-item nav-donate"><a href="/donaciones/" class="btn-donate">❤️ Donar</a></li>
+        </ul>
       </div>
     </nav>
 
