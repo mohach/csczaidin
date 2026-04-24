@@ -61,7 +61,7 @@ a:hover { color: var(--green-dark); }
 .nav-item-parent { position: relative; }
 .nav-item-parent > .nav-link { cursor: pointer; }
 .dropdown { position: static; list-style: none; padding-left: 1rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-.nav-item-parent.open .dropdown { max-height: 400px; }
+.nav-item-parent.open .dropdown { max-height: 400px !important; }
 .dropdown-link { display: block; padding: 0.55rem 0; color: var(--g700); text-decoration: none; font-size: 0.92rem; border-bottom: 1px solid var(--g100); }
 .dropdown-link:hover { color: var(--green); }
 .nav-donate { margin: 0.75rem 0 0; }
