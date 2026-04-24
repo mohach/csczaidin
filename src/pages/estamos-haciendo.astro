@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Slideshow from '../components/Slideshow.astro';
+---
+
+<Layout title="Estamos Haciendo…" description="El Centro Socio Cultural Zaidín es una asociación sin ánimo de lucro que desarrolla proyectos socioeducativos en el barrio del Zaidín.">
+  <section class="page-hero">
+    <h1>Estamos Haciendo…</h1>
+    <p class="subtitle">Conoce nuestra labor diaria en el barrio</p>
+  </section>
+
+  <div class="page-content">
+    <Slideshow images={[
+      "/images/estamos-haciendo/insta-1.jpg",
+      "/images/estamos-haciendo/insta-2.jpg",
+      "/images/estamos-haciendo/insta-3.jpg",
+      "/images/estamos-haciendo/insta-4.jpg",
+      "/images/estamos-haciendo/insta-5.jpg",
+      "/images/estamos-haciendo/insta-6.jpg",
+      "/images/estamos-haciendo/insta-7.jpg",
+      "/images/estamos-haciendo/insta-8.jpg"
+    ]} alt="Actividades del Centro Sociocultural Zaidín" />
+
+    <p>El Centro Socio Cultural Zaidín es una asociación sin ánimo de lucro cuyo objetivo es favorecer el desarrollo integral de las personas en condiciones de igualdad y el desarrollo intercultural del barrio.</p>
+
+    <p>Para ello, llevamos a cabo proyectos socioeducativos con el fin de impulsar la inserción y la participación social en condiciones de igualdad, interviniendo con los colectivos de menores y familias, población de origen migrante, jóvenes y población en riesgo de exclusión social en general.</p>
+
+    <p>Esta página recoge el día a día de nuestra actividad: talleres, eventos, actividades comunitarias y todo lo que hacemos para construir un barrio más justo y solidario.</p>
+
+    <div class="highlight-box" style="text-align:center">
+      <p>¿Quieres saber más sobre nuestros proyectos?</p>
+      <a href="/proyectos/" style="display:inline-block;margin-top:0.5rem;padding:0.6rem 1.5rem;background:var(--green);color:#fff;border-radius:var(--r);font-weight:700;text-decoration:none">Ver todos los proyectos →</a>
+    </div>
+  </div>
+</Layout>
