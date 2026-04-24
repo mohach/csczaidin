@@ -45,7 +45,7 @@ a:hover { color: var(--green-dark); }
   height: 56px;
 }
 .nav-logo { display: flex; align-items: center; }
-.nav-logo img { height: 38px; width: auto; display: block; }
+.nav-logo img { height: 44px; width: auto; display: block; }
 .nav-toggle { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 110; }
 .nav-toggle span { display: block; width: 24px; height: 2.5px; background: var(--g700); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
