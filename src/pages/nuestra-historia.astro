@@ -14,8 +14,35 @@ import Layout from '../layouts/Layout.astro';
 
     <p>El trabajo que se desarrolló con esta población se basó en los principios fundamentales que sobre la educación de adultos ofrecía la <strong>UNESCO</strong>, en colaboración con la enseñanza <strong>ECCA</strong>, y desde la metodología de la <strong>pedagogía de la liberación de Paulo Freire</strong>, adaptándolo a la realidad del barrio.</p>
 
+    <div class="hist-img-wide">
+      <img src="/images/historia-portada.png" alt="Portada del Centro Sociocultural Zaidín" loading="lazy" />
+    </div>
+
     <h2>1982: Constitución formal</h2>
     <p>Es en el año <strong>1982</strong> cuando se constituye formalmente la Asociación que llevará el nombre de <strong>"Centro Sociocultural de Adultos del Zaidín"</strong>. Posteriormente se realizó el cambio en los estatutos, quedando la denominación como: <strong>"ASOCIACIÓN CENTRO SOCIOCULTURAL ZAIDÍN"</strong>, abarcando en mayor medida la totalidad de la población con quienes trabajamos.</p>
+
+    <div class="hist-gallery">
+      <figure>
+        <img src="/images/historia-fiestas-80.jpg" alt="Fiestas del Zaidín en los años 80" loading="lazy" />
+        <figcaption>Fiestas del barrio del Zaidín en los años 80</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/historia-santa-adela.jpg" alt="Barrio de Santa Adela" loading="lazy" />
+        <figcaption>Barriada de Santa Adela, Zaidín</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/historia-santa-adela-0.jpg" alt="Vistas del Zaidín" loading="lazy" />
+        <figcaption>Vistas históricas del Zaidín</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/historia-bus.jpg" alt="Transporte en el Zaidín" loading="lazy" />
+        <figcaption>Autobús en el Zaidín</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/historia-barrio.jpg" alt="Calles del Zaidín" loading="lazy" />
+        <figcaption>Calles del barrio del Zaidín</figcaption>
+      </figure>
+    </div>
 
     <h2>Crecimiento impulsado por la comunidad</h2>
     <p>A este primer grupo les siguieron otras personas que llegaban al centro en función de sus necesidades más urgentes. Las demandas de la propia población fueron configurando nuestras líneas de trabajo:</p>
@@ -110,6 +137,46 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style is:global>
+  .hist-img-wide {
+    margin: 1.5rem 0;
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .hist-img-wide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hist-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  .hist-gallery figure {
+    margin: 0;
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--w);
+  }
+  .hist-gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+  }
+  .hist-gallery img:hover { transform: scale(1.05); }
+  .hist-gallery figcaption {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    color: var(--g500);
+    text-align: center;
+  }
+
   .demanda-card {
     display: flex;
     gap: 1rem;
@@ -180,5 +247,13 @@ import Layout from '../layouts/Layout.astro';
     color: var(--g500);
     margin: 0;
     line-height: 1.6;
+  }
+
+  @media (min-width: 640px) {
+    .hist-gallery { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .hist-gallery { grid-template-columns: repeat(5, 1fr); }
+    .hist-gallery img { height: 180px; }
   }
 </style>
