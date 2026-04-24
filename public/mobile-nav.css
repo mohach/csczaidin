@@ -1,10 +1,11 @@
 @media (max-width: 768px) {
+  .nav-inner { position: relative !important; }
   .nav-toggle { display: block !important; }
 
   .nav-panel {
     position: fixed !important;
     top: 0 !important;
-    right: -280px !important;
+    right: -100% !important;
     width: 280px !important;
     height: 100vh !important;
     background: #ffffff !important;
@@ -15,11 +16,13 @@
     z-index: 100 !important;
     overflow-y: auto !important;
     display: block !important;
+    flex: none !important;
   }
   .nav-panel.open { right: 0 !important; }
 
   .nav-menu {
     display: block !important;
+    flex: none !important;
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -31,7 +34,12 @@
     font-size: 1rem !important;
     height: auto !important;
     color: #334155 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
   }
+  .nav-menu .nav-link:last-child { border-bottom: none !important; }
+
+  .nav-donate { margin-left: 0 !important; padding-left: 0 !important; }
+  .nav-donate .btn-donate { display: inline-block !important; margin-top: 0.5rem !important; }
 
   .dropdown {
     display: block !important;

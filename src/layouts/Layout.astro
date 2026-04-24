@@ -115,8 +115,8 @@ const { title, description } = Astro.props;
       .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
       .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-      .nav-panel { display: contents; }
-      .nav-menu { display: flex; align-items: center; gap: 0; list-style: none; }
+      .nav-panel { display: flex; align-items: center; height: 100%; }
+      .nav-menu { display: flex; align-items: center; gap: 0; list-style: none; height: 100%; }
       .nav-item { position: relative; }
       .nav-link {
         display: flex; align-items: center; gap: 0.2rem;
