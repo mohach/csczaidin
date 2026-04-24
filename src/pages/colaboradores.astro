@@ -9,13 +9,15 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <div class="page-content">
-    <p>El Centro Sociocultural Zaidín es posible gracias al compromiso de muchas personas que donan su tiempo, sus conocimientos y su energía. Actualmente contamos con <strong>30 personas voluntarias</strong> que hacen posible el día a día de nuestros proyectos.</p>
+    <p>La labor del voluntariado es clave para el sostenimiento de la asociación, por ello se promueve el voluntariado social en el barrio, acercando la realidad con la que trabajamos día a día desde los valores de la solidaridad, la justicia social y el compromiso por el cambio social.</p>
+
+    <p>Actualmente contamos con un equipo de <strong>30 personas voluntarias</strong> y siempre estamos esperando a todos los que quieran aportar su granito de arena.</p>
 
     <div class="highlight-box">
       <h3>Perfiles de nuestro voluntariado</h3>
       <ul>
-        <li><strong>Profesionales jubilados</strong> que aportan su experiencia y sabiduría</li>
-        <li><strong>Jóvenes con formación</strong> que quieren aplicar sus conocimientos al servicio de la comunidad</li>
+        <li><strong>Profesionales jubilados</strong> con gran trayectoria en la docencia y otras especialidades, que deciden dedicar su tiempo a apoyar nuestra labor</li>
+        <li><strong>Jóvenes con formación</strong> que aprenden y aportan sus conocimientos en el desarrollo de los proyectos</li>
         <li>Personas de todas las edades comprometidas con la transformación social del barrio</li>
       </ul>
     </div>
@@ -30,6 +32,63 @@ import Layout from '../layouts/Layout.astro';
       <li>Cualquier otra habilidad que quieras compartir</li>
     </ul>
 
-    <a href="/contacto/" class="btn btn-primary" style="margin-top: var(--spacing-lg);">Contacta con nosotros</a>
+    <div style="text-align:center;margin:1.5rem 0">
+      <a href="/contacto/" class="btn btn-primary" style="display:inline-block;padding:0.7rem 1.8rem;background:var(--green);color:#fff;border-radius:var(--r);font-weight:700;text-decoration:none">💬 Contacta con nosotros</a>
+    </div>
+
+    <h2>Nuestros colaboradores</h2>
+    <p>Como todo centro, tenemos muchas necesidades económicas que a través de los fondos de proyectos y colaboraciones podemos dar respuesta a una parte de nuestras necesidades.</p>
+
+    <div class="logo-grid">
+      <div class="logo-card">
+        <img src="/images/colab-ayuntamiento.jpg" alt="Ayuntamiento de Granada" loading="lazy" />
+        <p>Ayuntamiento de Granada</p>
+      </div>
+      <div class="logo-card">
+        <img src="/images/colab-junta.jpg" alt="Junta de Andalucía" loading="lazy" />
+        <p>Junta de Andalucía</p>
+      </div>
+      <div class="logo-card">
+        <img src="/images/colab-fundacion-caixa.jpg" alt="Fundación La Caixa" loading="lazy" />
+        <p>Fundación La Caixa</p>
+      </div>
+      <div class="logo-card">
+        <img src="/images/colab-caja-granada.jpg" alt="Fundación Caja Granada" loading="lazy" />
+        <p>Fundación Caja Granada</p>
+      </div>
+    </div>
   </div>
 </Layout>
+
+<style is:global>
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .logo-card {
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .logo-card img {
+    max-width: 140px;
+    max-height: 80px;
+    object-fit: contain;
+    margin: 0 auto 0.5rem;
+    display: block;
+  }
+  .logo-card p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--g500);
+    margin: 0;
+  }
+  @media (min-width: 640px) {
+    .logo-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>

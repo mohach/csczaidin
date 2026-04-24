@@ -1,22 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Slideshow from '../components/Slideshow.astro';
 ---
 
 <Layout title="Planes y Protocolos">
   <section class="page-hero">
     <h1>Planes y Protocolos</h1>
-    <p class="subtitle">Documentos de planificación y procedimientos</p>
+    <p class="subtitle">Documentos de planificación y procedimientos de nuestra entidad</p>
   </section>
 
   <div class="page-content">
-    <p>Próximamente estará disponible la documentación relativa a nuestros planes de actuación y protocolos internos.</p>
+    <Slideshow images={[
+      "/images/marcha-8m.jpg"
+    ]} alt="Actividad del Centro Sociocultural Zaidín" />
+
+    <p>El Centro Sociocultural Zaidín cuenta con diversos planes y protocolos que guían nuestra actuación y garantizan una intervención de calidad, segura y alineada con nuestros valores.</p>
+
+    <h2>Protocolos</h2>
+    <p>Disponemos de protocolos de actuación en los siguientes ámbitos:</p>
+    <ul>
+      <li><strong>Prevención de la violencia de género</strong> — actuaciones para la detección, acompañamiento y derivación de casos</li>
+      <li><strong>Infancia y protección de menores</strong> — procedimientos para garantizar entornos seguros</li>
+      <li><strong>Igualdad de trato y no discriminación</strong> — medidas para garantizar la igualdad en todos nuestros espacios y actividades</li>
+      <li><strong>Prevención de riesgos laborales</strong> — seguridad y salud en el entorno de trabajo</li>
+    </ul>
+
+    <h2>Planes de actuación</h2>
+    <p>Nuestra planificación anual se refleja en los siguientes documentos:</p>
+    <ul>
+      <li>Plan de actuación anual del centro</li>
+      <li>Plan de formación del voluntariado</li>
+      <li>Plan de dinamización comunitaria</li>
+      <li>Plan de comunicación y transparencia</li>
+    </ul>
 
     <div class="highlight-box">
-      <p>Para más información, contacta con nosotros:</p>
-      <ul class="data-list">
+      <p>Para solicitar acceso a cualquiera de estos documentos o resolver cualquier duda, no dudes en contactar con nosotros:</p>
+      <ul class="data-list" style="margin-top:0.5rem">
         <li><span class="label">Teléfono:</span> <a href="tel:958136876">958 136 876</a> / <a href="tel:655120590">655 12 05 90</a></li>
         <li><span class="label">Email:</span> <a href="mailto:csazaidin@yahoo.es">csazaidin@yahoo.es</a></li>
-        <li><span class="label">Dirección:</span> Calle Zurbarán nº 8, 18007 Granada</li>
       </ul>
     </div>
   </div>

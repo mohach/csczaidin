@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Slideshow from '../components/Slideshow.astro';
 ---
 
 <Layout title="Organigrama" description="Estructura organizativa del equipo del Centro Sociocultural Zaidín.">
@@ -9,9 +10,15 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <div class="page-content">
-    <p>El Centro Sociocultural Zaidín cuenta con un equipo multidisciplinar que trabaja de forma coordinada para dar respuesta a las necesidades del barrio.</p>
+    <p>En el Centro Sociocultural Zaidín trabajamos cada día para ofrecer un espacio de encuentro, participación y desarrollo comunitario. Nuestro organigrama refleja la estructura organizativa que permite coordinar y dinamizar las actividades, servicios y proyectos que ofrecemos a nuestro barrio.</p>
 
-    <h2>Roles del grupo que conforma el centro sociocultural</h2>
+    <Slideshow images={[
+      "/images/organigrama-final-organigrama.png",
+      "/images/organigrama-junta-directiva.jpg",
+      "/images/organigrama-centro-zaidin.jpg"
+    ]} alt="Organigrama CSCZ" />
+
+    <h2>Roles del equipo</h2>
     <div class="card-grid">
       <div class="card">
         <h3>👥 Junta Directiva</h3>
