@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="EDUCO — Voces de la Infancia Migrante">
+  <section class="page-hero">
+    <h1>EDUCO</h1>
+    <p class="subtitle">Voces de la Infancia Migrante</p>
+  </section>
+
+  <div class="page-content">
+    <p><strong>EDUCO</strong> es un proyecto que promueve el bienestar, la inclusión social y la convivencia intercultural de niños, niñas y adolescentes migrantes a través de actividades socioeducativas, artísticas y comunitarias.</p>
+
+    <h2>Actividades</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>🎭 Talleres artísticos</h3>
+        <p>Teatro, improvisación, expresión corporal y títeres como herramientas de expresión y desarrollo personal.</p>
+      </div>
+      <div class="card">
+        <h3>🛡️ Sensibilización</h3>
+        <p>Talleres de concienciación sobre violencia y derechos de la infancia.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Convivencia</h3>
+        <p>Actividades comunitarias que fomentan el encuentro y el diálogo intercultural.</p>
+      </div>
+    </div>
+
+    <div class="educo-gallery">
+      <figure>
+        <img src="/images/educo-whatsapp1.jpeg" alt="Taller artístico con niños y niñas" loading="lazy" />
+        <figcaption>Taller artístico del proyecto EDUCO</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/educo-whatsapp2.jpeg" alt="Actividad con adolescentes" loading="lazy" />
+        <figcaption>Actividades con adolescentes del barrio</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/educo-whatsapp3.jpeg" alt="Taller de títeres y expresión" loading="lazy" />
+        <figcaption>Taller de títeres y expresión artística</figcaption>
+      </figure>
+    </div>
+
+    <p>A través del arte y la participación, los niños y adolescentes migrantes encuentran un espacio seguro donde expresarse, compartir sus experiencias y construir un futuro más inclusivo.</p>
+  </div>
+</Layout>
+
+<style>
+  .educo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+  }
+
+  .educo-gallery figure {
+    margin: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .educo-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .educo-gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .educo-gallery figcaption {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: center;
+    background: var(--color-bg-alt);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+  }
+
+  .card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+</style>

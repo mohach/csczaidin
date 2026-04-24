@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Donaciones" description="Colabora con el Centro Sociocultural Zaidín a través de tus donaciones.">
+  <section class="page-hero">
+    <h1>Donaciones</h1>
+    <p class="subtitle">Con tu apoyo construimos un barrio y una sociedad más justa</p>
+  </section>
+
+  <section class="page-content">
+    <div class="donation-intro card">
+      <p>
+        Con tu apoyo estarás colaborando en la construcción de un barrio y una sociedad más justa.
+        Gracias a personas como tú, seguimos avanzando en los diferentes proyectos que llevamos a cabo en Granada.
+      </p>
+      <p class="highlight-text">¡Suma con el Centro Sociocultural Zaidín!</p>
+    </div>
+
+    <h2>Formas de colaboración</h2>
+
+    <h3>💳 Transferencia o ingreso bancario</h3>
+    <div class="bank-info card">
+      <p><strong>Entidad:</strong> CaixaBank</p>
+      <p><strong>IBAN:</strong> <code>ES86 2100 2294 0201 0074 7644</code></p>
+    </div>
+
+    <div class="certificate-info card">
+      <h3>📄 Certificado de donación</h3>
+      <p>
+        Si quieres recibir tu certificado de donación, envíanos un email a
+        <a href="mailto:csazaidin@yahoo.es"><strong>csazaidin@yahoo.es</strong></a>
+        con tu nombre completo, DNI y comprobante de la transferencia o ingreso.
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .donation-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    background: var(--color-accent-light);
+    border-color: var(--color-accent);
+  }
+
+  .highlight-text {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 1.3rem;
+    margin-top: var(--spacing-md);
+  }
+
+  .bank-info {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary);
+  }
+
+  .bank-info code {
+    display: inline-block;
+    background: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+    margin-top: var(--spacing-sm);
+    word-break: break-all;
+  }
+
+  .certificate-info {
+    margin-top: var(--spacing-lg);
+  }
+
+  .certificate-info h3 {
+    color: var(--color-primary) !important;
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    color: var(--color-accent);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .page-content p {
+    margin-bottom: var(--spacing-md);
+  }
+</style>

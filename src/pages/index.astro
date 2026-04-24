@@ -1,17 +1,399 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Inicio" description="Centro Sociocultural Zaidín — Igualdad, Integración, Participación. Asociación vecinal en el barrio del Zaidín, Granada desde 1977.">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Centro Sociocultural Zaidín</h1>
+      <p class="tagline">Igualdad · Integración · Participación</p>
+      <blockquote>
+        "La cultura popular tiene por misión, despertar la sabiduría que tiene todo hombre y mujer dentro de sí y ponerla en acción, para transformar la realidad."
+        <cite>Paulo Freire</cite>
+      </blockquote>
+      <div class="hero-actions">
+        <a href="/conocenos/" class="btn btn-outline-hero">Conócenos</a>
+        <a href="/contacto/" class="btn btn-accent">Contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-values">
+    <div class="section-inner">
+      <h2>Nuestros pilares</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon" aria-hidden="true">⚖️</div>
+          <h3>Justicia Social</h3>
+          <p>Solidaridad y ayuda mutua como base de nuestra acción comunitaria.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon" aria-hidden="true">🌍</div>
+          <h3>Convivencia Intercultural</h3>
+          <p>Respeto y diálogo entre culturas como riqueza compartida del barrio.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon" aria-hidden="true">🤝</div>
+          <h3>Participación Social</h3>
+          <p>Desarrollo comunitario desde la implicación activa de cada persona.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon" aria-hidden="true">💪</div>
+          <h3>Igualdad de Género</h3>
+          <p>Empoderamiento de las mujeres como eje de transformación social.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-projects">
+    <div class="section-inner">
+      <h2>Nuestros Proyectos</h2>
+      <div class="card-grid">
+        <article class="card project-card">
+          <h3>EDUCO</h3>
+          <p>Voces de la Infancia Migrante — bienestar e inclusión de niños y adolescentes migrantes.</p>
+          <a href="/educo/" class="btn btn-primary">Saber más</a>
+        </article>
+        <article class="card project-card">
+          <h3>EDUCA ZAIDIN</h3>
+          <p>Apoyo socioeducativo para familias y menores en riesgo de fracaso escolar.</p>
+          <a href="/educa-zaidin/" class="btn btn-primary">Saber más</a>
+        </article>
+        <article class="card project-card">
+          <h3>TODOS SOMOS ZAIDIN</h3>
+          <p>Integración de vecinos migrantes: clases de español, preparación de nacionalidad y acompañamiento.</p>
+          <a href="/todos-somos-zaidin/" class="btn btn-primary">Saber más</a>
+        </article>
+        <article class="card project-card">
+          <h3>FÓRMATE Y PARTICIPA</h3>
+          <p>Igualdad de género: cafés tertulia, talleres, sensibilización contra la violencia machista.</p>
+          <a href="/formate-y-participa/" class="btn btn-primary">Saber más</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-instagram">
+    <div class="section-inner">
+      <h2>Últimas publicaciones</h2>
+      <p class="section-subtitle">Síguenos en <a href="https://www.instagram.com/csc_zaidin/" target="_blank" rel="noopener noreferrer">Instagram @csc_zaidin</a></p>
+      <div class="instagram-grid">
+        <a href="https://www.instagram.com/p/DXgl-C9iAuz/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+        <a href="https://www.instagram.com/p/DXbilpsiBKl/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+        <a href="https://www.instagram.com/p/DXMebG1CLES/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+        <a href="https://www.instagram.com/p/DW1yqlHCHvh/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+        <a href="https://www.instagram.com/p/DWumE7BixqQ/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+        <a href="https://www.instagram.com/p/DWhnHMqCxbI/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+        <a href="https://www.instagram.com/p/DWLuGq1iAag/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+        <a href="https://www.instagram.com/p/DV_m8Z0Ca_U/" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <div class="insta-icon" aria-hidden="true">📸</div>
+          <span>Ver publicación</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-cta">
+    <div class="section-inner">
+      <h2>¿Quieres colaborar?</h2>
+      <p>Tu apoyo hace posible nuestro trabajo en el barrio del Zaidín.</p>
+      <div class="cta-actions">
+        <a href="/donaciones/" class="btn btn-accent">Haz una donación</a>
+        <a href="/colaboradores/" class="btn btn-outline">Hazte voluntario</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  /* ============================
+     Hero
+     ============================ */
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75vh;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(18, 91, 82, 0.92) 0%, rgba(26, 122, 110, 0.88) 50%, rgba(13, 92, 82, 0.92) 100%), url('/images/cropped-header.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 750px;
+    color: var(--color-white);
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .hero-content .tagline {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .hero-content blockquote {
+    font-family: var(--font-serif);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.7;
+    opacity: 0.92;
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--color-accent);
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-bottom: var(--spacing-xl);
+    font-style: italic;
+  }
+
+  .hero-content blockquote cite {
+    display: block;
+    margin-top: var(--spacing-sm);
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid var(--color-white);
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition);
+  }
+  .btn-outline-hero:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--color-white);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  /* ============================
+     Sections
+     ============================ */
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .section-inner h2 {
+    text-align: center;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+    margin-top: calc(-1 * var(--spacing-md));
+  }
+
+  /* Values Section */
+  .section-values {
+    background: var(--color-bg-alt);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .value-card {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+  .value-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .value-card h3 {
+    color: var(--color-primary);
+    font-size: 1.15rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .value-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+  }
+
+  /* Projects Section */
+  .section-projects {
+    background: var(--color-white);
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  .project-card h3 {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+  }
+  .project-card p {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+  }
+  .project-card .btn {
+    align-self: flex-start;
+  }
+
+  /* Instagram Section */
+  .section-instagram {
+    background: var(--color-bg-alt);
+  }
+
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .insta-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: box-shadow var(--transition), transform var(--transition);
+    aspect-ratio: 1;
+  }
+  .insta-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+  .insta-icon {
+    font-size: 2rem;
+  }
+
+  /* CTA Section */
+  .section-cta {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    color: var(--color-white);
+    text-align: center;
+  }
+  .section-cta h2 {
+    color: var(--color-white);
+  }
+  .section-cta p {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+    opacity: 0.95;
+  }
+  .cta-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .section-cta .btn-outline {
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
+  .section-cta .btn-outline:hover {
+    background: var(--color-white);
+    color: var(--color-accent-dark);
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 60vh;
+    }
+    .instagram-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

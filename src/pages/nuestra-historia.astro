@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nuestra Historia" description="Historia del Centro Sociocultural Zaidín — 45+ años impulsando derechos, convivencia y desarrollo comunitario en el Zaidín.">
+  <section class="page-hero">
+    <h1>Nuestra Historia</h1>
+    <p class="subtitle">45+ años impulsando derechos, convivencia y desarrollo comunitario en el corazón del Zaidín</p>
+  </section>
+
+  <div class="page-content">
+    <p>El Centro Sociocultural Zaidín nace en 1977, fruto de la iniciativa de <strong>tres congregaciones religiosas</strong> que comenzaron una campaña de alfabetización dirigida a mujeres del barrio. Lo que empezó como una respuesta a una necesidad concreta se convirtió en un proyecto comunitario que perdura hasta hoy.</p>
+
+    <p>Nuestro trabajo se fundamenta en los principios de la <strong>educación de adultos de la UNESCO</strong>, la metodología de la <strong>Escuela de Cultura y Comunicación (ECCA)</strong> y la <strong>pedagogía liberadora de Paulo Freire</strong>. Estas bases nos han guiado durante más de cuatro décadas de acción comunitaria.</p>
+
+    <div class="history-gallery">
+      <figure>
+        <img src="/images/fiestas-zaidin-80.jpg" alt="Fiestas del Zaidín en los años 80" loading="lazy" />
+        <figcaption>Fiestas del barrio del Zaidín en los años 80</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/santa-adela.jpg" alt="Barrio de Santa Adela, Zaidín" loading="lazy" />
+        <figcaption>Barriada de Santa Adela, Zaidín</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/santa-adela_0.jpg" alt="Vistas del Zaidín" loading="lazy" />
+        <figcaption>Vistas históricas del Zaidín</figcaption>
+      </figure>
+      <figure>
+        <img src="/images/bus-1.jpg" alt="Transporte en el Zaidín" loading="lazy" />
+        <figcaption>Autobús en el Zaidín</figcaption>
+      </figure>
+    </div>
+
+    <p>En <strong>1982</strong> nos constituimos formalmente como asociación, consolidando nuestro compromiso con el barrio del Zaidín y sus habitantes.</p>
+
+    <h2>Áreas de trabajo que emergieron</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>👩 Mujer</h3>
+        <p>Trabajo pionero con mujeres que dio lugar a:</p>
+        <ul>
+          <li>Red de mujeres del Zaidín</li>
+          <li>Asociación de Mujeres Alhalba</li>
+          <li>Mujeres por la Cultura</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🏘️ Barrio</h3>
+        <p>Defensa y mejora del barrio en áreas como salud, biblioteca y vivienda.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Migración</h3>
+        <p>Integración de personas migrantes y convivencia intercultural.</p>
+      </div>
+      <div class="card">
+        <h3>👨‍👩‍👧‍👦 Infancia y Familia</h3>
+        <p>Apoyo educativo para menores y familias en situación de vulnerabilidad.</p>
+      </div>
+    </div>
+
+    <h2>Ámbitos estatutarios (Artículo 3)</h2>
+    <div class="highlight-box">
+      <ul style="margin-bottom: 0;">
+        <li><strong>MUJER</strong> — Promoción de la igualdad de género y empoderamiento femenino</li>
+        <li><strong>INMIGRACIÓN E INTERCULTURALIDAD</strong> — Integración y convivencia entre culturas</li>
+        <li><strong>MENORES Y FAMILIA</strong> — Apoyo socioeducativo a la infancia y sus familias</li>
+        <li><strong>SOCIOCULTURAL</strong> — Actividades culturales y comunitarias</li>
+        <li><strong>TRABAJO EN RED</strong> — Colaboración con otras entidades y colectivos</li>
+        <li><strong>COOPERACIÓN INTERNACIONAL Y SENSIBILIZACIÓN PARA EL DESARROLLO</strong></li>
+      </ul>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .history-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+  }
+
+  .history-gallery figure {
+    margin: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .history-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .history-gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .history-gallery figcaption {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-align: center;
+    background: var(--color-bg-alt);
+  }
+
+  .highlight-box {
+    background: var(--color-primary-light);
+    border-left: 4px solid var(--color-primary);
+    padding: var(--spacing-lg);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: var(--spacing-lg) 0;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+  }
+
+  .card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition), transform var(--transition);
+  }
+  .card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+</style>
