@@ -9,7 +9,7 @@ const { images, alt = "Imagen del proyecto", id } = Astro.props;
 const uid = id || `ss-${Math.random().toString(36).slice(2, 8)}`;
 ---
 
-<div class="slideshow" id={uid}>
+<div class="slideshow" id={uid} data-ss>
   <div class="slideshow-track">
     {images.map((img, i) => (
       <div class="slide" data-index={i}>
@@ -32,64 +32,54 @@ const uid = id || `ss-${Math.random().toString(36).slice(2, 8)}`;
 </div>
 
 <script>
-  (function() {
-    const el = document.getElementById('{uid}');
-    if (!el) return;
-    const track = el.querySelector('.slideshow-track');
-    const slides = el.querySelectorAll('.slide');
-    const prev = el.querySelector('.ss-prev');
-    const next = el.querySelector('.ss-next');
-    const dots = el.querySelectorAll('.ss-dot');
-    let current = 0;
-    let autoTimer = null;
+  document.addEventListener('DOMContentLoaded', function() {
+    var all = document.querySelectorAll('[data-ss]');
+    all.forEach(function(el) {
+      var track = el.querySelector('.slideshow-track');
+      var slides = el.querySelectorAll('.slide');
+      var prev = el.querySelector('.ss-prev');
+      var next = el.querySelector('.ss-next');
+      var dots = el.querySelectorAll('.ss-dot');
+      if (!track || slides.length === 0) return;
+      var current = 0;
+      var timer = null;
 
-    function goTo(idx) {
-      if (idx < 0) idx = slides.length - 1;
-      if (idx >= slides.length) idx = 0;
-      current = idx;
-      track.style.transform = 'translateX(-' + (current * 100) + '%)';
-      // active dot
-      dots.forEach(d => d.classList.remove('active'));
-      const activeDot = el.querySelector('.ss-dot[data-index="' + current + '"]');
-      if (activeDot) activeDot.classList.add('active');
-    }
-
-    function startAuto() {
-      stopAuto();
-      autoTimer = setInterval(function() { goTo(current + 1); }, 4000);
-    }
-    function stopAuto() {
-      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
-    }
-
-    if (prev) prev.addEventListener('click', function() { stopAuto(); goTo(current - 1); startAuto(); });
-    if (next) next.addEventListener('click', function() { stopAuto(); goTo(current + 1); startAuto(); });
-    dots.forEach(function(dot) {
-      dot.addEventListener('click', function() {
-        stopAuto();
-        goTo(parseInt(this.getAttribute('data-index')));
-        startAuto();
-      });
-    });
-
-    // Touch/swipe support
-    let startX = 0;
-    track.addEventListener('touchstart', function(e) {
-      startX = e.touches[0].clientX;
-      stopAuto();
-    }, {passive: true});
-    track.addEventListener('touchend', function(e) {
-      var diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) {
-        goTo(diff > 0 ? current + 1 : current - 1);
+      function goTo(idx) {
+        if (idx < 0) idx = slides.length - 1;
+        if (idx >= slides.length) idx = 0;
+        current = idx;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach(function(d) { d.classList.remove('active'); });
+        var active = el.querySelector('.ss-dot[data-index="' + current + '"]');
+        if (active) active.classList.add('active');
       }
-      startAuto();
-    }, {passive: true});
 
-    // Init
-    goTo(0);
-    if (slides.length > 1) startAuto();
-  })();
+      function start() { stop(); timer = setInterval(function() { goTo(current + 1); }, 4000); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      if (prev) prev.addEventListener('click', function() { stop(); goTo(current - 1); start(); });
+      if (next) next.addEventListener('click', function() { stop(); goTo(current + 1); start(); });
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          stop();
+          goTo(parseInt(this.getAttribute('data-index')));
+          start();
+        });
+      });
+
+      // Touch swipe
+      var startX = 0;
+      track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; stop(); }, {passive: true});
+      track.addEventListener('touchend', function(e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+        start();
+      }, {passive: true});
+
+      goTo(0);
+      if (slides.length > 1) start();
+    });
+  });
 </script>
 
 <style is:global>
