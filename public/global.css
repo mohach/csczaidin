@@ -224,7 +224,7 @@ a:hover { color: var(--green-dark); }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 1rem; }
 .page-content {
-  max-width: 720px; margin: 0 auto;
+  max-width: 840px; margin: 0 auto;
   padding: 2rem 1rem 3rem;
 }
 .page-content h2 { font-size: 1.3rem; color: var(--green); margin: 2rem 0 0.6rem; }
