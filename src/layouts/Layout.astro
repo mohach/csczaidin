@@ -115,6 +115,7 @@ const { title, description } = Astro.props;
       .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
       .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
+      .nav-panel { display: contents; }
       .nav-menu { display: flex; align-items: center; gap: 0; list-style: none; }
       .nav-item { position: relative; }
       .nav-link {
@@ -428,40 +429,42 @@ const { title, description } = Astro.props;
 
         <div class="nav-overlay" id="navOverlay"></div>
 
-        <ul class="nav-menu" id="navMenu">
-          <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
-          <li class="nav-item"><a href="/apoyo-a-la-regularizacion/" class="nav-link">Regularización</a></li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" onclick="return false">Conócenos ▾</a>
-            <ul class="dropdown">
-              <li><a href="/nuestra-historia/" class="dropdown-link">Nuestra Historia</a></li>
-              <li><a href="/mision/" class="dropdown-link">Misión</a></li>
-              <li><a href="/vision/" class="dropdown-link">Visión</a></li>
-              <li><a href="/valores/" class="dropdown-link">Valores</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" onclick="return false">Proyectos ▾</a>
-            <ul class="dropdown">
-              <li><a href="/educo/" class="dropdown-link">EDUCO</a></li>
-              <li><a href="/educa-zaidin/" class="dropdown-link">EDUCA ZAIDIN</a></li>
-              <li><a href="/eracis/" class="dropdown-link">ERACIS</a></li>
-              <li><a href="/todos-somos-zaidin/" class="dropdown-link">Todos Somos Zaidín</a></li>
-              <li><a href="/formate-y-participa/" class="dropdown-link">Fórmate y Participa</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" onclick="return false">Transparencia ▾</a>
-            <ul class="dropdown">
-              <li><a href="/organigrama/" class="dropdown-link">Organigrama</a></li>
-              <li><a href="/memorias/" class="dropdown-link">Memorias</a></li>
-              <li><a href="/planes-y-protocolos/" class="dropdown-link">Planes y Protocolos</a></li>
-              <li><a href="/colaboradores/" class="dropdown-link">Colaboradores</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a href="/contacto/" class="nav-link">Contacto</a></li>
-          <li class="nav-item nav-donate"><a href="/donaciones/" class="btn-donate">❤️ Donar</a></li>
-        </ul>
+        <div class="nav-panel" id="navPanel">
+          <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="/apoyo-a-la-regularizacion/" class="nav-link">Regularización</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" onclick="return false">Conócenos ▾</a>
+              <ul class="dropdown">
+                <li><a href="/nuestra-historia/" class="dropdown-link">Nuestra Historia</a></li>
+                <li><a href="/mision/" class="dropdown-link">Misión</a></li>
+                <li><a href="/vision/" class="dropdown-link">Visión</a></li>
+                <li><a href="/valores/" class="dropdown-link">Valores</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" onclick="return false">Proyectos ▾</a>
+              <ul class="dropdown">
+                <li><a href="/educo/" class="dropdown-link">EDUCO</a></li>
+                <li><a href="/educa-zaidin/" class="dropdown-link">EDUCA ZAIDIN</a></li>
+                <li><a href="/eracis/" class="dropdown-link">ERACIS</a></li>
+                <li><a href="/todos-somos-zaidin/" class="dropdown-link">Todos Somos Zaidín</a></li>
+                <li><a href="/formate-y-participa/" class="dropdown-link">Fórmate y Participa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" onclick="return false">Transparencia ▾</a>
+              <ul class="dropdown">
+                <li><a href="/organigrama/" class="dropdown-link">Organigrama</a></li>
+                <li><a href="/memorias/" class="dropdown-link">Memorias</a></li>
+                <li><a href="/planes-y-protocolos/" class="dropdown-link">Planes y Protocolos</a></li>
+                <li><a href="/colaboradores/" class="dropdown-link">Colaboradores</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="/contacto/" class="nav-link">Contacto</a></li>
+            <li class="nav-item nav-donate"><a href="/donaciones/" class="btn-donate">❤️ Donar</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -513,19 +516,19 @@ const { title, description } = Astro.props;
     <script>
       (function(){
         const toggle = document.getElementById('navToggle');
-        const menu = document.getElementById('navMenu');
+        const panel = document.getElementById('navPanel');
         const overlay = document.getElementById('navOverlay');
 
-        if (toggle && menu) {
+        if (toggle && panel) {
           toggle.addEventListener('click', function() {
             const open = toggle.getAttribute('aria-expanded') !== 'true';
             toggle.setAttribute('aria-expanded', open);
-            menu.classList.toggle('open', open);
+            panel.classList.toggle('open', open);
             if (overlay) overlay.classList.toggle('show', open);
             document.body.style.overflow = open ? 'hidden' : '';
           });
           document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && menu.classList.contains('open')) toggle.click();
+            if (e.key === 'Escape' && panel.classList.contains('open')) toggle.click();
           });
           if (overlay) overlay.addEventListener('click', function() { toggle.click(); });
         }
@@ -548,7 +551,7 @@ const { title, description } = Astro.props;
         window.addEventListener('resize', function() {
           if (window.innerWidth > 768) {
             document.querySelectorAll('.nav-item.open').forEach(function(el) { el.classList.remove('open'); });
-            menu.classList.remove('open');
+            panel.classList.remove('open');
             if (overlay) overlay.classList.remove('show');
             document.body.style.overflow = '';
             if (toggle) toggle.setAttribute('aria-expanded', 'false');
