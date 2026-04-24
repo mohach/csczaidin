@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Proyectos" description="Conoce todos los proyectos activos del Centro Sociocultural Zaidín. Educación, inclusión, igualdad y participación comunitaria.">
+  <section class="page-hero">
+    <h1>Nuestros Proyectos</h1>
+    <p class="subtitle">Trabajamos para fomentar la convivencia intercultural a través de diferentes líneas de proyectos</p>
+  </section>
+
+  <div class="page-content">
+    <div class="stats-grid" style="margin-bottom:2rem">
+      <div class="stat-card">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Proyectos activos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Miembros</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">200+</span>
+        <span class="stat-label">Participantes</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">43</span>
+        <span class="stat-label">Años de servicio</span>
+      </div>
+    </div>
+
+    <p>En el Centro Sociocultural Zaidín desarrollamos proyectos que abordan distintas realidades del barrio, desde la infancia y la juventud hasta la integración de personas migrantes y la igualdad de género. Cada proyecto nace de las necesidades detectadas en la comunidad y se construye con la participación activa de los vecinos y vecinas.</p>
+
+    <h2>Líneas de trabajo</h2>
+
+    <div class="proj-grid-full">
+      <a href="/educo/" class="proj-card-full">
+        <span class="proj-e">🧒</span>
+        <div>
+          <h3>EDUCO — Voces de la Infancia Migrante</h3>
+          <p>Bienestar, inclusión social y convivencia intercultural de niños, niñas y adolescentes migrantes.</p>
+        </div>
+      </a>
+      <a href="/educa-zaidin/" class="proj-card-full">
+        <span class="proj-e">📚</span>
+        <div>
+          <h3>EDUCA ZAIDIN</h3>
+          <p>Apoyo socioeducativo para familias y menores en riesgo de fracaso escolar.</p>
+        </div>
+      </a>
+      <a href="/todos-somos-zaidin/" class="proj-card-full">
+        <span class="proj-e">🗣️</span>
+        <div>
+          <h3>Todos Somos Zaidín</h3>
+          <p>Clases de español, preparación de nacionalidad e integración social para personas migrantes.</p>
+        </div>
+      </a>
+      <a href="/formate-y-participa/" class="proj-card-full">
+        <span class="proj-e">✊</span>
+        <div>
+          <h3>Fórmate y Participa</h3>
+          <p>Talleres, cafés tertulia y acciones de sensibilización por la igualdad de género.</p>
+        </div>
+      </a>
+      <a href="/eracis/" class="proj-card-full">
+        <span class="proj-e">🏘️</span>
+        <div>
+          <h3>ERACIS</h3>
+          <p>Estrategia Regional Andaluza para la Cohesión e Inclusión Social.</p>
+        </div>
+      </a>
+      <a href="/juventud-zaidinera/" class="proj-card-full">
+        <span class="proj-e">🌟</span>
+        <div>
+          <h3>Juventud Zaidinera</h3>
+          <p>Proyecto Erasmus+ de participación juvenil, formación y voluntariado socioeducativo.</p>
+        </div>
+      </a>
+      <a href="/redefine/" class="proj-card-full">
+        <span class="proj-e">💼</span>
+        <div>
+          <h3>Redefine tu Futuro</h3>
+          <p>Empleabilidad juvenil, orientación laboral y acompañamiento sociolaboral.</p>
+        </div>
+      </a>
+      <a href="/apoyo-a-la-regularizacion/" class="proj-card-full">
+        <span class="proj-e">📋</span>
+        <div>
+          <h3>Apoyo a la Regularización</h3>
+          <p>Informe de Vulnerabilidad para la Regularización Extraordinaria.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+  }
+  .stat-card {
+    text-align: center;
+    padding: 1.25rem 0.75rem;
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    box-shadow: var(--shadow);
+  }
+  .stat-num {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--green);
+    line-height: 1.1;
+  }
+  .stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--g500);
+    margin-top: 0.2rem;
+  }
+
+  .proj-grid-full {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+  .proj-card-full {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    padding: 1rem 1.25rem;
+    text-decoration: none !important;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .proj-card-full:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--green-light);
+  }
+  .proj-e { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.15rem; }
+  .proj-card-full h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green);
+    margin: 0 0 0.25rem;
+    line-height: 1.3;
+  }
+  .proj-card-full p {
+    font-size: 0.85rem;
+    color: var(--g500);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 640px) {
+    .proj-grid-full { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 769px) {
+    .stats-grid { grid-template-columns: repeat(4, 1fr); max-width: 700px; }
+  }
+</style>

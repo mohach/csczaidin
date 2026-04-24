@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="¿Quiénes Somos?" description="Conoce el Centro Sociocultural Zaidín, un espacio abierto a toda la comunidad donde promovemos la participación, la creatividad y el aprendizaje compartido.">
+  <section class="page-hero">
+    <h1>¿Quiénes Somos?</h1>
+    <p class="subtitle">Un espacio abierto a toda la comunidad</p>
+  </section>
+
+  <div class="page-content">
+    <p>El Centro Sociocultural Zaidín es un espacio abierto a toda la comunidad donde promovemos la participación, la creatividad y el aprendizaje compartido. Nuestro objetivo es ofrecer un lugar de encuentro donde las personas puedan desarrollarse, expresarse y sentirse parte activa del barrio.</p>
+
+    <p>Trabajamos cada día para crear actividades, talleres, servicios y proyectos que respondan a las necesidades de la ciudadanía, favoreciendo la inclusión, la convivencia y el crecimiento personal y colectivo. Nuestro equipo está formado por profesionales, voluntariado y personas colaboradoras que creen en la fuerza de la comunidad y en el valor del trabajo conjunto.</p>
+
+    <p><strong>¡Bienvenid@s al Centro Sociocultural Zaidín!</strong></p>
+
+    <h2>Explora nuestras secciones</h2>
+    <div class="qs-grid">
+      <a href="/nuestra-historia/" class="qs-card">
+        <span class="qs-icon">📖</span>
+        <h3>Nuestra Historia</h3>
+        <p>Conoce el origen y la trayectoria de nuestra asociación desde 1977</p>
+      </a>
+      <a href="/mision/" class="qs-card">
+        <span class="qs-icon">🎯</span>
+        <h3>Misión</h3>
+        <p>Nuestra razón de ser y compromiso con el barrio</p>
+      </a>
+      <a href="/vision/" class="qs-card">
+        <span class="qs-icon">🔭</span>
+        <h3>Visión</h3>
+        <p>El barrio que queremos construir juntos</p>
+      </a>
+      <a href="/valores/" class="qs-card">
+        <span class="qs-icon">💚</span>
+        <h3>Valores</h3>
+        <p>Los principios que guían nuestro trabajo diario</p>
+      </a>
+      <a href="/organigrama/" class="qs-card">
+        <span class="qs-icon">👥</span>
+        <h3>Organigrama</h3>
+        <p>Conoce a nuestro equipo multidisciplinar</p>
+      </a>
+      <a href="/colaboradores/" class="qs-card">
+        <span class="qs-icon">🤝</span>
+        <h3>Colaboradores</h3>
+        <p>Nuestros voluntarios y entidades colaboradoras</p>
+      </a>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  .qs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+  }
+  .qs-card {
+    display: block;
+    background: var(--w);
+    border: 1px solid var(--g200);
+    border-radius: var(--r);
+    padding: 1.1rem 1.25rem;
+    text-decoration: none !important;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .qs-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--green-light);
+  }
+  .qs-icon { font-size: 1.5rem; display: block; margin-bottom: 0.3rem; }
+  .qs-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green);
+    margin: 0 0 0.3rem;
+  }
+  .qs-card p {
+    font-size: 0.88rem;
+    color: var(--g500);
+    margin: 0;
+    line-height: 1.5;
+  }
+  @media (min-width: 640px) {
+    .qs-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 900px) {
+    .qs-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
