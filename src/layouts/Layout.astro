@@ -414,8 +414,7 @@ const { title, description } = Astro.props;
          ============================ */
 
     </style>
-    <link rel="stylesheet" href="/mobile-nav.css" />
-  </head>
+      </head>
   <body>
     <a href="#main-content" class="skip-link">Saltar al contenido</a>
 
@@ -513,7 +512,7 @@ const { title, description } = Astro.props;
       </div>
     </footer>
 
-    <script>
+    <script is:inline>
       (function(){
         const toggle = document.getElementById('navToggle');
         const panel = document.getElementById('navPanel');
@@ -557,6 +556,13 @@ const { title, description } = Astro.props;
             if (toggle) toggle.setAttribute('aria-expanded', 'false');
           }
         });
+      })(
+      // Inject mobile nav CSS (bypasses Astro compiler)
+      (function(){
+        var css = '@media (max-width:768px){.nav-inner{position:relative !important}.nav-toggle{display:block !important}.nav-panel{position:fixed !important;top:0 !important;right:-100% !important;width:280px !important;height:100vh !important;background:#fff !important;padding:4.5rem 1.5rem 2rem !important;border-left:1px solid #e2e8f0 !important;box-shadow:-2px 0 12px rgba(0,0,0,0.1) !important;transition:right .3s ease !important;z-index:100 !important;overflow-y:auto !important;display:block !important;flex:none !important}.nav-panel.open{right:0 !important}.nav-menu{display:block !important;flex:none !important;list-style:none !important;padding:0 !important;margin:0 !important}.nav-menu .nav-item{display:block !important}.nav-menu .nav-link{display:block !important;padding:.75rem .5rem !important;font-size:1rem !important;height:auto !important;color:#334155 !important;border-bottom:1px solid #f1f5f9 !important}.nav-menu .nav-link:last-child{border-bottom:none !important}.nav-donate{margin-left:0 !important;padding:0 !important}.nav-donate .btn-donate{display:inline-block !important;margin-top:.5rem !important}.dropdown{display:block !important;position:static !important;visibility:visible !important;opacity:1 !important;transform:none !important;box-shadow:none !important;border:none !important;padding-left:1rem !important;max-height:0 !important;overflow:hidden !important;transition:max-height .3s ease !important}.nav-item.open>.dropdown{max-height:400px !important}.nav-overlay{position:fixed !important;inset:0 !important;background:rgba(0,0,0,0.3) !important;z-index:99 !important;opacity:0 !important;visibility:hidden !important;transition:opacity .3s,visibility .3s !important}.nav-overlay.show{opacity:1 !important;visibility:visible !important}.footer-inner{grid-template-columns:1fr !important;gap:1.5rem !important}}';
+        var s = document.createElement('style');
+        s.textContent = css;
+        document.head.appendChild(s);
       })();
     </script>
   </body>
